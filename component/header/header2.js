@@ -9,10 +9,9 @@ import { useRouter } from "next/router";
 const Header2 = () => {
   const router = useRouter();
 
-
   return (
     <div>
-      <div className="navbar bg-gray-50 w-full">
+      <div className="navbar bg-gray-50 w-full sm:w-4/6 sm:m-auto">
         <div className="navbar-start">
           <div className="dropdown">
             <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -35,45 +34,42 @@ const Header2 = () => {
               tabIndex={0}
               className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52"
             >
-          
-                <li>
-                  <Link href="https://adbacklist.com/blogs">Blogs</Link>
-                </li>
-                <li>
-                  <Link href="https://adbacklist.com/login">Login</Link>
-                </li>
-                <li>
-                  <Link href="https://adbacklist.com/register">Registration</Link>
-                </li>
-         
-    
+              <li>
+                <Link href="https://adbacklist.com/blogs">Blogs</Link>
+              </li>
+              <li>
+                <Link href="https://adbacklist.com/login">Login</Link>
+              </li>
+              <li>
+                <Link href="https://adbacklist.com/register">Registration</Link>
+              </li>
             </ul>
           </div>
           <div className="flex items-center">
-          <h1 className={styles.title}> <Link  href="/">SKIPTHEGAMES</Link> </h1>
-          <Link href={'https://adbacklist.com/user/post'}><button className={styles.postButton}> + Add Post </button></Link>
+            <h1 className={styles.title}>
+              {" "}
+              <Link href="/">SKIPTHEGAMES</Link>{" "}
+            </h1>
+            <Link href={"https://adbacklist.com/user/post"}>
+              <button className={styles.postButton}> + Add Post </button>
+            </Link>
           </div>
-   
         </div>
 
         <div className="navbar-end">
           <ul className={styles.menu}>
-        
-              
-                <li>
-                  <Link href="https://adbacklist.com/blogs">Blogs</Link>
-                </li>
-                <li>
-                  <Link href="https://adbacklist.com/login">Login</Link>
-                </li>
-                <li>
-                  <Link href="https://adbacklist.com/register">Registration</Link>
-                </li>
-         
+            <li>
+              <Link href="https://adbacklist.com/blogs">Blogs</Link>
+            </li>
+            <li>
+              <Link href="https://adbacklist.com/login">Login</Link>
+            </li>
+            <li>
+              <Link href="https://adbacklist.com/register">Registration</Link>
+            </li>
           </ul>
         </div>
       </div>
-    
     </div>
   );
 };

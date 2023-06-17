@@ -45,14 +45,7 @@
         "createdAt": "2023-01-30T12:41:46.750Z",
         "children": []
       },
-      {
-        "_id": "63d7bb114aa59811ad1620fd",
-        "name": "TS",
-        "parentId": "63d7b8f94aa59811ad1620d9",
-        "createdBy": "Jhon Doe",
-        "createdAt": "2023-01-30T12:41:53.988Z",
-        "children": []
-      },
+
       {
         "_id": "63d7bb194aa59811ad1620ff",
         "name": "Strip Clubs",
@@ -61,14 +54,7 @@
         "createdAt": "2023-01-30T12:42:01.493Z",
         "children": []
       },
-      {
-        "_id": "63d7bb194aa59811ad1620ff",
-        "name": "Phone and Websites",
-        "parentId": "63d7b8f94aa59811ad1620d9",
-        "createdBy": "Jhon Doe",
-        "createdAt": "2023-01-30T12:42:01.493Z",
-        "children": []
-      },
+
       {
         "_id": "63d7bb204aa59811ad162101",
         "name": "Sugar Babies",
@@ -160,14 +146,6 @@
       },
       {
         "_id": "63d7bc084aa59811ad162130",
-        "name": "Computers - Electronics",
-        "parentId": "63d7ba034aa59811ad1620e5",
-        "createdBy": "Jhon Doe",
-        "createdAt": "2023-01-30T12:46:00.992Z",
-        "children": []
-      },
-      {
-        "_id": "63d7bc084aa59811ad162130",
         "name": "Tickets",
         "parentId": "63d7ba034aa59811ad1620e5",
         "createdBy": "Jhon Doe",
@@ -182,22 +160,7 @@
         "createdAt": "2023-01-30T12:46:00.992Z",
         "children": []
       },
-      {
-        "_id": "63d7bc084aa59811ad162130",
-        "name": "CDs - DVDs",
-        "parentId": "63d7ba034aa59811ad1620e5",
-        "createdBy": "Jhon Doe",
-        "createdAt": "2023-01-30T12:46:00.992Z",
-        "children": []
-      },
-      {
-        "_id": "63d7bc114aa59811ad162132",
-        "name": "Cell Phones",
-        "parentId": "63d7ba034aa59811ad1620e5",
-        "createdBy": "Jhon Doe",
-        "createdAt": "2023-01-30T12:46:09.004Z",
-        "children": []
-      },
+
       {
         "_id": "63d7bc114aa59811ad162132",
         "name": "Farm-Garden",
@@ -269,19 +232,10 @@
         "createdBy": "Jhon Doe",
         "createdAt": "2023-01-30T12:46:55.904Z",
         "children": []
-      },
-      {
-        "_id": "63d7bc3f4aa59811ad16213e",
-        "name": "Yard Sales",
-        "parentId": "63d7ba034aa59811ad1620e5",
-        "createdBy": "Jhon Doe",
-        "createdAt": "2023-01-30T12:46:55.904Z",
-        "children": []
       }
     ]
   },
 
-  
   {
     "_id": "63d7b9f34aa59811ad1620e3",
     "name": "Pets",
@@ -424,14 +378,6 @@
         "createdBy": "Jhon Doe",
         "createdAt": "2023-01-30T12:43:09.851Z",
         "children": []
-      },
-      {
-        "_id": "63d7bba14aa59811ad16211c",
-        "name": "Massage",
-        "parentId": "63d7b9f34aa59811ad1620e3",
-        "createdBy": "Jhon Doe",
-        "createdAt": "2023-01-30T12:44:17.061Z",
-        "children": []
       }
     ]
   },
@@ -516,14 +462,6 @@
       },
       {
         "_id": "63d7bd1e4aa59811ad162170",
-        "name": "Construction",
-        "parentId": "63d7ba204aa59811ad1620ed",
-        "createdBy": "Jhon Doe",
-        "createdAt": "2023-01-30T12:50:38.380Z",
-        "children": []
-      },
-      {
-        "_id": "63d7bd1e4aa59811ad162170",
         "name": "Genaral Labor",
         "parentId": "63d7ba204aa59811ad1620ed",
         "createdBy": "Jhon Doe",
@@ -578,30 +516,7 @@
         "createdAt": "2023-01-30T12:50:38.380Z",
         "children": []
       },
-      {
-        "_id": "63d7bd1e4aa59811ad162170",
-        "name": "Hospitality and Tourism",
-        "parentId": "63d7ba204aa59811ad1620ed",
-        "createdBy": "Jhon Doe",
-        "createdAt": "2023-01-30T12:50:38.380Z",
-        "children": []
-      },
-      {
-        "_id": "63d7bd1e4aa59811ad162170",
-        "name": "Information and Communication Technology",
-        "parentId": "63d7ba204aa59811ad1620ed",
-        "createdBy": "Jhon Doe",
-        "createdAt": "2023-01-30T12:50:38.380Z",
-        "children": []
-      },
-      {
-        "_id": "63d7bd1e4aa59811ad162170",
-        "name": "Real Estate and Property",
-        "parentId": "63d7ba204aa59811ad1620ed",
-        "createdBy": "Jhon Doe",
-        "createdAt": "2023-01-30T12:50:38.380Z",
-        "children": []
-      },
+
       {
         "_id": "63d7bd1e4aa59811ad162170",
         "name": "Legal",
@@ -629,14 +544,6 @@
       {
         "_id": "63d7bd1e4aa59811ad162170",
         "name": "Mining, Resources and Energy",
-        "parentId": "63d7ba204aa59811ad1620ed",
-        "createdBy": "Jhon Doe",
-        "createdAt": "2023-01-30T12:50:38.380Z",
-        "children": []
-      },
-      {
-        "_id": "63d7bd1e4aa59811ad162170",
-        "name": "Recruitment and HR",
         "parentId": "63d7ba204aa59811ad1620ed",
         "createdBy": "Jhon Doe",
         "createdAt": "2023-01-30T12:50:38.380Z",
@@ -796,27 +703,6 @@
       }
     ]
   },
-  
-  
-  
-
-
-  
-  
-  
-
-
-  
-  
- 
-  
-  
-  
-
-
-  
-
-
 
   {
     "_id": "63d7ba134aa59811ad1620e9",
@@ -878,22 +764,6 @@
         "parentId": "63d7ba134aa59811ad1620e9",
         "createdBy": "Jhon Doe",
         "createdAt": "2023-01-30T12:48:49.088Z",
-        "children": []
-      },
-      {
-        "_id": "63d7bcb84aa59811ad16215a",
-        "name": "Computer, Telecom and Mobile",
-        "parentId": "63d7ba134aa59811ad1620e9",
-        "createdBy": "Jhon Doe",
-        "createdAt": "2023-01-30T12:48:56.757Z",
-        "children": []
-      },
-      {
-        "_id": "63d7bcc04aa59811ad16215c",
-        "name": "Dress Making and Alterations",
-        "parentId": "63d7ba134aa59811ad1620e9",
-        "createdBy": "Jhon Doe",
-        "createdAt": "2023-01-30T12:49:04.655Z",
         "children": []
       },
       {
@@ -1025,14 +895,6 @@
         "children": []
       },
       {
-        "_id": "63d7bc594aa59811ad162140",
-        "name": "Artists",
-        "parentId": "63d7ba0b4aa59811ad1620e7",
-        "createdBy": "Jhon Doe",
-        "createdAt": "2023-01-30T12:47:21.629Z",
-        "children": []
-      },
-      {
         "_id": "63d7bc614aa59811ad162142",
         "name": "Activities and Hobbies",
         "parentId": "63d7ba0b4aa59811ad1620e7",
@@ -1075,14 +937,6 @@
       {
         "_id": "63d7bc754aa59811ad162148",
         "name": "Local News",
-        "parentId": "63d7ba0b4aa59811ad1620e7",
-        "createdBy": "Jhon Doe",
-        "createdAt": "2023-01-30T12:47:49.968Z",
-        "children": []
-      },
-      {
-        "_id": "63d7bc754aa59811ad162148",
-        "name": "Lost and Found",
         "parentId": "63d7ba0b4aa59811ad1620e7",
         "createdBy": "Jhon Doe",
         "createdAt": "2023-01-30T12:47:49.968Z",

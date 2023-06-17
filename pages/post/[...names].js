@@ -41,37 +41,25 @@ const Post = () => {
   const [reload, setReload] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const [age, setAge] = useState("");
+  const [pages, setPages] = useState(1);
+
   const [page, setPage] = useState(1);
 
+  console.log(freeCityPost, "Asdfa");
 
   async function getPosts() {
     try {
-
-      const url = `https://api-adbacklist.vercel.app/api/products/all?page=${page}&category=${router?.query?.names?.[2]}`
-
-
-      const response = await axios.get(url);
-
-  
-
-      const forcity = response.data.data.products?.filter(
-        (a) =>
-          a?.city == router?.query?.names[0] ||
-          a?.cities?.includes(router?.query?.names[0])
+      const response = await axios.get(
+        `https://api-adbacklist.vercel.app/api/products/all?page=${page}&category=${router?.query?.names?.[2]}&state=${router?.query?.names[0]}`
       );
 
+      setPages(response.data.pages);
 
-
-      const cityPost = forcity?.filter(
-        (a) => a?.subCategory == router?.query?.names[2]
-      );
-
+      const cityPost = response.data.data.products;
       const day1time = new Date().toDateString();
       const day1 = cityPost.filter(
         (a) => new Date(a.updatedAt).toDateString() == day1time
       );
-
-
 
       const day2time = new Date(
         new Date().getTime() - 24 * 60 * 60 * 1000
@@ -79,7 +67,6 @@ const Post = () => {
       const day2 = cityPost.filter(
         (a) => new Date(a.updatedAt).toDateString() == day2time
       );
-
 
       const day3time = new Date(
         new Date().getTime() - 24 * 60 * 60 * 1000 * 2
@@ -145,6 +132,7 @@ const Post = () => {
         day7time: day7time,
         lastWeek: lastWeek,
       });
+
       setPost(cityPost);
       setIsLoading(false);
     } catch (error) {
@@ -153,11 +141,11 @@ const Post = () => {
     }
   }
 
-
-
   async function getAds() {
     try {
-      const response = await axios.get(`https://api-adbacklist.vercel.app/api/sideads`);
+      const response = await axios.get(
+        `https://api-adbacklist.vercel.app/api/sideads`
+      );
       const data = response.data.ads;
       const category = data
         .filter((a) => a?.category == router?.query?.names?.[1])
@@ -186,14 +174,11 @@ const Post = () => {
 
       setFreeCityPost(freePost);
     }
-  }, [post, router?.query?.names, reload]);
-
-
+  }, [post, router?.query?.names, reload, page]);
 
   const onChange = (pageNumber) => {
-    setPage(pageNumber)
+    setPage(pageNumber);
   };
-
 
   const setAdult = (e) => {
     Cookies.set("age", e);
@@ -215,10 +200,11 @@ const Post = () => {
       <Header data={router?.query?.names} />
 
       {isLoading ? (
-        <div className="text-6xl">
-          <div className="btn  bg-transparent border-0 loading flex m-auto">
-            loading
-          </div>
+        <div
+          style={{ height: "700px" }}
+          className="flex justify-center items-center"
+        >
+          <img className="" width={100} src="/loader.gif" />
         </div>
       ) : (
         <>
@@ -276,21 +262,49 @@ const Post = () => {
                     )}
                   </ul>
 
-                  {/* premium post  */}
-
                   {error == "no error" ? (
                     <>
                       <div>
-                        {!premiumCityPost?.length == 0 && (
+                        {!freeCityPost?.length == 0 ? (
                           <h1 className={style.premiumpostTitle2}>
                             Premium Ads
                           </h1>
+                        ) : (
+                          ""
                         )}
+
+                        {freeCityPost?.map((a) => (
+                          <Link
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            href={`/post/details/${router?.query?.names?.[1]}/${a._id}`}
+                            key={a._id}
+                          >
+                            <div className={style.productContainer}>
+                              <p className="text-sm text-blue-600 sm:text-base hover:underline">
+                                {a?.name}--
+                                <span className="text-black">{a?.age}</span>
+                              </p>
+                            </div>
+                          </Link>
+                        ))}
+                      </div>
+
+                      {/* other post  */}
+
+                      <div>
+                        {!premiumCityPost?.length == 0 && (
+                          <h1 className={style.freepostTitle}>Ads</h1>
+                        )}
+
                         <>
-                          {!state.day1?.length == 0 ? (
-                            <h1 className={style.premiumpostTitle}>
-                              {state.day1time}
-                            </h1>
+                          {state?.day1?.[0]?.isPremium == true ? (
+                            <>
+                              {" "}
+                              <h1 className={style.premiumpostTitle}>
+                                {state.day1time}
+                              </h1>
+                            </>
                           ) : (
                             ""
                           )}
@@ -298,46 +312,58 @@ const Post = () => {
                           {state.day1?.map((p) => (
                             <div>
                               {p.isPremium == true ? (
-                                <Link
-                                  href={`/post/details/${router?.query?.names?.[1]}/${p._id}`}
-                                  key={p._id}
-                                >
-                                  <div className={style.productContainer}>
-                                    <h1 className="text-sm text-blue-600 sm:text-base hover:underline">
-                                      {p?.name}-
-                                      <span className="text-black">
-                                        {p?.age}
-                                      </span>
-                                    </h1>
-                                  </div>
-                                </Link>
+                                <>
+                                  <Link
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    href={`/post/details/${router?.query?.names?.[1]}/${p._id}`}
+                                    key={p._id}
+                                  >
+                                    <div className={style.productContainer}>
+                                      <p className="text-sm text-blue-600 sm:text-base hover:underline">
+                                        {p?.name}--
+                                        <span className="text-black">
+                                          {p?.age}
+                                        </span>
+                                      </p>
+                                    </div>
+                                  </Link>
+                                </>
                               ) : (
                                 ""
                               )}
                             </div>
                           ))}
                         </>
+
                         <>
-                          {!state.day2?.length == 0 && (
-                            <h1 className={style.premiumpostTitle}>
-                              {state.day2time}
-                            </h1>
+                          {state?.day2?.[0]?.isPremium == true ? (
+                            <>
+                              {" "}
+                              <h1 className={style.premiumpostTitle}>
+                                {state.day2time}
+                              </h1>
+                            </>
+                          ) : (
+                            ""
                           )}
 
                           {state.day2?.map((p) => (
                             <div>
                               {p.isPremium == true ? (
                                 <Link
+                                  target="_blank"
+                                  rel="noopener noreferrer"
                                   href={`/post/details/${router?.query?.names?.[1]}/${p._id}`}
                                   key={p._id}
                                 >
                                   <div className={style.productContainer}>
-                                    <h1 className="text-sm text-blue-600 sm:text-base hover:underline">
+                                    <p className="text-sm text-blue-600 sm:text-base hover:underline">
                                       {p?.name}-
                                       <span className="text-black">
                                         {p?.age}
                                       </span>
-                                    </h1>
+                                    </p>
                                   </div>
                                 </Link>
                               ) : (
@@ -346,27 +372,35 @@ const Post = () => {
                             </div>
                           ))}
                         </>
+
                         <>
-                          {!state.day3?.length == 0 && (
-                            <h1 className={style.premiumpostTitle}>
-                              {state.day3time}
-                            </h1>
+                          {state?.day3?.[0]?.isPremium == true ? (
+                            <>
+                              {" "}
+                              <h1 className={style.premiumpostTitle}>
+                                {state.day3time}
+                              </h1>
+                            </>
+                          ) : (
+                            ""
                           )}
 
                           {state.day3?.map((p) => (
                             <div>
                               {p.isPremium == true ? (
                                 <Link
+                                  target="_blank"
+                                  rel="noopener noreferrer"
                                   href={`/post/details/${router?.query?.names?.[1]}/${p._id}`}
                                   key={p._id}
                                 >
                                   <div className={style.productContainer}>
-                                    <h1 className="text-sm text-blue-600 sm:text-base hover:underline">
+                                    <p className="text-sm text-blue-600 sm:text-base hover:underline">
                                       {p?.name}-
                                       <span className="text-black">
                                         {p?.age}
                                       </span>
-                                    </h1>
+                                    </p>
                                   </div>
                                 </Link>
                               ) : (
@@ -376,26 +410,33 @@ const Post = () => {
                           ))}
                         </>
                         <>
-                          {!state.day4?.length == 0 && (
-                            <h1 className={style.premiumpostTitle}>
-                              {state.day4time}
-                            </h1>
+                          {state?.day4?.[0]?.isPremium == true ? (
+                            <>
+                              {" "}
+                              <h1 className={style.premiumpostTitle}>
+                                {state.day4time}
+                              </h1>
+                            </>
+                          ) : (
+                            ""
                           )}
 
                           {state.day4?.map((p) => (
                             <div>
                               {p.isPremium == true ? (
                                 <Link
+                                  target="_blank"
+                                  rel="noopener noreferrer"
                                   href={`/post/details/${router?.query?.names?.[1]}/${p._id}`}
                                   key={p._id}
                                 >
                                   <div className={style.productContainer}>
-                                    <h1 className="text-sm text-blue-600 sm:text-base hover:underline">
+                                    <p className="text-sm text-blue-600 sm:text-base hover:underline">
                                       {p?.name}-
                                       <span className="text-black">
                                         {p?.age}
                                       </span>
-                                    </h1>
+                                    </p>
                                   </div>
                                 </Link>
                               ) : (
@@ -404,56 +445,74 @@ const Post = () => {
                             </div>
                           ))}
                         </>
+
                         <>
-                          {!state.day5?.length == 0 && (
-                            <h1 className={style.premiumpostTitle}>
-                              {state.day5time}
-                            </h1>
+                          {state?.day5?.[0]?.isPremium == true ? (
+                            <>
+                              {" "}
+                              <h1 className={style.premiumpostTitle}>
+                                {state.day5time}
+                              </h1>
+                            </>
+                          ) : (
+                            ""
                           )}
 
                           {state.day5?.map((p) => (
                             <div>
                               {p.isPremium == true ? (
-                                <Link
-                                  href={`/post/details/${router?.query?.names?.[1]}/${p._id}`}
-                                  key={p._id}
-                                >
-                                  <div className={style.productContainer}>
-                                    <h1 className="text-sm text-blue-600 sm:text-base hover:underline">
-                                      {p?.name}-
-                                      <span className="text-black">
-                                        {p?.age}
-                                      </span>
-                                    </h1>
-                                  </div>
-                                </Link>
+                                <>
+                                  <Link
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    href={`/post/details/${router?.query?.names?.[1]}/${p._id}`}
+                                    key={p._id}
+                                  >
+                                    <div className={style.productContainer}>
+                                      <p className="text-sm text-blue-600 sm:text-base hover:underline">
+                                        {p?.name}-
+                                        <span className="text-black">
+                                          {p?.age}
+                                        </span>
+                                      </p>
+                                    </div>
+                                  </Link>{" "}
+                                </>
                               ) : (
                                 ""
                               )}
                             </div>
                           ))}
                         </>
+
                         <>
-                          {!state.day6?.length == 0 && (
-                            <h1 className={style.premiumpostTitle}>
-                              {state.day6time}
-                            </h1>
+                          {state?.day6?.[0]?.isPremium == true ? (
+                            <>
+                              {" "}
+                              <h1 className={style.premiumpostTitle}>
+                                {state.day6time}
+                              </h1>
+                            </>
+                          ) : (
+                            ""
                           )}
 
                           {state.day6?.map((p) => (
                             <div>
                               {p.isPremium == true ? (
                                 <Link
+                                  target="_blank"
+                                  rel="noopener noreferrer"
                                   href={`/post/details/${router?.query?.names?.[1]}/${p._id}`}
                                   key={p._id}
                                 >
                                   <div className={style.productContainer}>
-                                    <h1 className="text-sm text-blue-600 sm:text-base hover:underline">
+                                    <p className="text-sm text-blue-600 sm:text-base hover:underline">
                                       {p?.name}-
                                       <span className="text-black">
                                         {p?.age}
                                       </span>
-                                    </h1>
+                                    </p>
                                   </div>
                                 </Link>
                               ) : (
@@ -463,26 +522,33 @@ const Post = () => {
                           ))}
                         </>
                         <>
-                          {!state.day7?.length == 0 && (
-                            <h1 className={style.premiumpostTitle}>
-                              {state.day7time}
-                            </h1>
+                          {state?.day7?.[0]?.isPremium == true ? (
+                            <>
+                              {" "}
+                              <h1 className={style.premiumpostTitle}>
+                                {state.day7time}
+                              </h1>
+                            </>
+                          ) : (
+                            ""
                           )}
 
                           {state.day7?.map((p) => (
                             <div>
                               {p.isPremium == true ? (
                                 <Link
+                                  target="_blank"
+                                  rel="noopener noreferrer"
                                   href={`/post/details/${router?.query?.names?.[1]}/${p._id}`}
                                   key={p._id}
                                 >
                                   <div className={style.productContainer}>
-                                    <h1 className="text-sm text-blue-600 sm:text-base hover:underline">
+                                    <p className="text-sm text-blue-600 sm:text-base hover:underline">
                                       {p?.name}-
                                       <span className="text-black">
                                         {p?.age}
                                       </span>
-                                    </h1>
+                                    </p>
                                   </div>
                                 </Link>
                               ) : (
@@ -492,26 +558,33 @@ const Post = () => {
                           ))}
                         </>
                         <>
-                          {!state.lastWeek?.length == 0 && (
-                            <h1 className={style.premiumpostTitle}>
-                              Last Week
-                            </h1>
+                          {state?.lastWeek?.[0]?.isPremium == true ? (
+                            <>
+                              {" "}
+                              <h1 className={style.premiumpostTitle}>
+                                Last Week
+                              </h1>
+                            </>
+                          ) : (
+                            ""
                           )}
 
                           {state.lastWeek?.map((p) => (
                             <div>
                               {p.isPremium == true ? (
                                 <Link
+                                  target="_blank"
+                                  rel="noopener noreferrer"
                                   href={`/post/details/${router?.query?.names?.[1]}/${p._id}`}
                                   key={p._id}
                                 >
                                   <div className={style.productContainer}>
-                                    <h1 className="text-sm text-blue-600 sm:text-base hover:underline">
+                                    <p className="text-sm text-blue-600 sm:text-base hover:underline">
                                       {p?.name}-
                                       <span className="text-black">
                                         {p?.age}
                                       </span>
-                                    </h1>
+                                    </p>
                                   </div>
                                 </Link>
                               ) : (
@@ -522,17 +595,19 @@ const Post = () => {
                         </>
                       </div>
 
-                      <div>
+                      {/* Free post  */}
+
+                      {/* <div>
                         {!freeCityPost?.length == 0 && (
                           <h1 className={style.freepostTitle}>Free Post</h1>
                         )}
 
                         <>
-                          {!state.day1?.length == 0 && (
+                        {!freeCityPost?.length == 0 & !state.day1?.length == 0 ? (
                             <h1 className={style.freepostTitle2}>
-                              {state.day1time}
+                              {state.day1time} 
                             </h1>
-                          )}
+                          ): ""}
 
                           {state.day1?.map((p) => (
                             <div>
@@ -542,12 +617,12 @@ const Post = () => {
                                   key={p._id}
                                 >
                                   <div className={style.productContainer}>
-                                    <h1 className="text-sm text-blue-600 sm:text-base hover:underline">
+                                    <p className="text-sm text-blue-600 sm:text-base hover:underline">
                                       {p?.name}-
                                       <span className="text-black">
                                         {p?.age}
                                       </span>
-                                    </h1>
+                                    </p>
                                   </div>
                                 </Link>
                               ) : (
@@ -557,11 +632,11 @@ const Post = () => {
                           ))}
                         </>
                         <>
-                          {!state.day2?.length == 0 && (
+                          {!freeCityPost?.length == 0 & !state.day2?.length == 0 ? (
                             <h1 className={style.freepostTitle2}>
-                              {state.day2time}
+                              {state.day2time} {freeCityPost?.length}
                             </h1>
-                          )}
+                          ): ""}
 
                           {state.day2?.map((p) => (
                             <div>
@@ -571,12 +646,12 @@ const Post = () => {
                                   key={p._id}
                                 >
                                   <div className={style.productContainer}>
-                                    <h1 className="text-sm text-blue-600 sm:text-base hover:underline">
+                                    <p className="text-sm text-blue-600 sm:text-base hover:underline">
                                       {p?.name}-
                                       <span className="text-black">
                                         {p?.age}
                                       </span>
-                                    </h1>
+                                    </p>
                                   </div>
                                 </Link>
                               ) : (
@@ -586,11 +661,11 @@ const Post = () => {
                           ))}
                         </>
                         <>
-                          {!state.day3?.length == 0 && (
+                          {!state.day3?.length == 0 & !freeCityPost?.length == 0 ?  (
                             <h1 className={style.freepostTitle2}>
                               {state.day3time}
                             </h1>
-                          )}
+                          ): ""}
 
                           {state.day3?.map((p) => (
                             <div>
@@ -600,12 +675,12 @@ const Post = () => {
                                   key={p._id}
                                 >
                                   <div className={style.productContainer}>
-                                    <h1 className="text-sm text-blue-600 sm:text-base hover:underline">
+                                    <p className="text-sm text-blue-600 sm:text-base hover:underline">
                                       {p?.name}-
                                       <span className="text-black">
                                         {p?.age}
                                       </span>
-                                    </h1>
+                                    </p>
                                   </div>
                                 </Link>
                               ) : (
@@ -615,11 +690,11 @@ const Post = () => {
                           ))}
                         </>
                         <>
-                          {!state.day4?.length == 0 && (
+                          {!state.day4?.length == 0 & !freeCityPost?.length == 0 ? (
                             <h1 className={style.freepostTitle2}>
                               {state.day4time}
                             </h1>
-                          )}
+                          ): ""}
 
                           {state.day4?.map((p) => (
                             <div>
@@ -629,12 +704,12 @@ const Post = () => {
                                   key={p._id}
                                 >
                                   <div className={style.productContainer}>
-                                    <h1 className="text-sm text-blue-600 sm:text-base hover:underline">
+                                    <p className="text-sm text-blue-600 sm:text-base hover:underline">
                                       {p?.name}-
                                       <span className="text-black">
                                         {p?.age}
                                       </span>
-                                    </h1>
+                                    </p>
                                   </div>
                                 </Link>
                               ) : (
@@ -644,11 +719,11 @@ const Post = () => {
                           ))}
                         </>
                         <>
-                          {!state.day5?.length == 0 && (
+                          {!state.day5?.length == 0 & !freeCityPost?.length == 0 ? (
                             <h1 className={style.freepostTitle2}>
                               {state.day5time}
                             </h1>
-                          )}
+                          ):""}
 
                           {state.day5?.map((p) => (
                             <div>
@@ -658,12 +733,12 @@ const Post = () => {
                                   key={p._id}
                                 >
                                   <div className={style.productContainer}>
-                                    <h1 className="text-sm text-blue-600 sm:text-base hover:underline">
+                                    <p className="text-sm text-blue-600 sm:text-base hover:underline">
                                       {p?.name}-
                                       <span className="text-black">
                                         {p?.age}
                                       </span>
-                                    </h1>
+                                    </p>
                                   </div>
                                 </Link>
                               ) : (
@@ -673,11 +748,11 @@ const Post = () => {
                           ))}
                         </>
                         <>
-                          {!state.day6?.length == 0 && (
+                          {!state.day6?.length == 0 & !freeCityPost?.length == 0 ? (
                             <h1 className={style.freepostTitle2}>
                               {state.day6time}
                             </h1>
-                          )}
+                          ): ""}
 
                           {state.day6?.map((p) => (
                             <div>
@@ -687,12 +762,12 @@ const Post = () => {
                                   key={p._id}
                                 >
                                   <div className={style.productContainer}>
-                                    <h1 className="text-sm text-blue-600 sm:text-base hover:underline">
+                                    <p className="text-sm text-blue-600 sm:text-base hover:underline">
                                       {p?.name}-
                                       <span className="text-black">
                                         {p?.age}
                                       </span>
-                                    </h1>
+                                    </p>
                                   </div>
                                 </Link>
                               ) : (
@@ -702,11 +777,11 @@ const Post = () => {
                           ))}
                         </>
                         <>
-                          {!state.day7?.length == 0 && (
+                          {!state.day7?.length == 0 & !freeCityPost?.length == 0 ? (
                             <h1 className={style.freepostTitle2}>
                               {state.day7time}
                             </h1>
-                          )}
+                          ) : ""}
 
                           {state.day7?.map((p) => (
                             <div>
@@ -716,12 +791,12 @@ const Post = () => {
                                   key={p._id}
                                 >
                                   <div className={style.productContainer}>
-                                    <h1 className="text-sm text-blue-600 sm:text-base hover:underline">
+                                    <p className="text-sm text-blue-600 sm:text-base hover:underline">
                                       {p?.name}-
                                       <span className="text-black">
                                         {p?.age}
                                       </span>
-                                    </h1>
+                                    </p>
                                   </div>
                                 </Link>
                               ) : (
@@ -731,9 +806,9 @@ const Post = () => {
                           ))}
                         </>
                         <>
-                          {!state.lastWeek?.length == 0 && (
+                          {state.lastWeek?.length == 0 & !freeCityPost?.length == 0  ? (
                             <h1 className={style.freepostTitle2}>Last Week</h1>
-                          )}
+                          ) : ""}
 
                           {state.lastWeek?.map((p) => (
                             <div>
@@ -743,12 +818,12 @@ const Post = () => {
                                   key={p._id}
                                 >
                                   <div className={style.productContainer}>
-                                    <h1 className="text-sm text-blue-600 sm:text-base hover:underline">
+                                    <p className="text-sm text-blue-600 sm:text-base hover:underline">
                                       {p?.name}-
                                       <span className="text-black">
                                         {p?.age}
                                       </span>
-                                    </h1>
+                                    </p>
                                   </div>
                                 </Link>
                               ) : (
@@ -757,7 +832,7 @@ const Post = () => {
                             </div>
                           ))}
                         </>
-                      </div>
+                      </div> */}
                     </>
                   ) : (
                     "No Post Found"
@@ -765,13 +840,15 @@ const Post = () => {
                   <hr className={style.hr} />
 
                   <div className={style.paginate}>
-                    <Pagination showQuickJumper showSizeChanger={false} defaultCurrent={page} onChange={onChange} total={500} />
-
+                    <Pagination
+                      showSizeChanger={false}
+                      pageSize={50}
+                      defaultCurrent={page}
+                      onChange={onChange}
+                      total={pages}
+                    />
                   </div>
-
-
                 </div>
-
 
                 <div className={style.othersLink}>
                   {ads.map((a) => (
@@ -780,8 +857,8 @@ const Post = () => {
                         <Image
                           className={style.othersLinkImage}
                           src={`${a.image}`}
-                          width={200}
-                          height={200}
+                          width={1000}
+                          height={800}
                           alt="image"
                         />
                         <p className="text-blue-400">{a.title}</p>
