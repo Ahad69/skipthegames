@@ -21,8 +21,10 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
 
         {/* <link rel="icon" href="/logo.png" /> */}
-
-     
+        <meta
+          name="google-site-verification"
+          content="LY6Z48B7wRP_Hrd7cDAs3wQjh83MGwWSv8hHQd6Ue6o"
+        />
       </Head>
 
       <main className={styles.main}>
