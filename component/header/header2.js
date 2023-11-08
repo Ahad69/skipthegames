@@ -62,11 +62,9 @@ const Header2 = () => {
               <Link href="https://adbacklist.com/blogs">Blogs</Link>
             </li>
             <li>
-              <Link href="https://adbacklist.com/login">Login</Link>
+              <Link href="https://adbacklist.com/login">Login/SignUp</Link>
             </li>
-            <li>
-              <Link href="https://adbacklist.com/register">Registration</Link>
-            </li>
+            
           </ul>
         </div>
       </div>
