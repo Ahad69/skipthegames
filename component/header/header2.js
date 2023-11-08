@@ -37,11 +37,8 @@ const Header2 = () => {
               <li>
                 <Link href="https://adbacklist.com/blogs">Blogs</Link>
               </li>
-              <li>
-                <Link href="https://adbacklist.com/login">Login</Link>
-              </li>
-              <li>
-                <Link href="https://adbacklist.com/register">Registration</Link>
+                    <li>
+                <Link href="https://adbacklist.com/login">Login/SignUp</Link>
               </li>
             </ul>
           </div>
