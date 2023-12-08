@@ -230,13 +230,25 @@ const Details = () => {
                   <br />
                 </>
               )}
-              <h1 className="text-black text-2xl">Most Popular Ads</h1>
-              <div className="flex justify-center">
+           {newAds?.length ? (
+                <h1 className="text-black text-2xl">Most Popular Ads </h1>
+              ) : (
+                ""
+              )}
+
+              <div className="grid sm:grid-cols-4 m-auto grid-cols-2">
                 {newAds?.map((a) => (
                   <div className="m-2 text-blue-600" key={a._id}>
-                    <a href={`${a?.link}`} target="_blank" rel="noreferrer" className="text-blue-600">
-                      <img className="w-full h-36" src={a?.image} />
-                      <p className="text-blue-400 underline">{a?.title}</p>
+                    <a
+                      href={`${a?.link}`}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="text-blue-600"
+                    >
+                      <img src={a?.image} width={250} />
+                      <p className="text-blue-400 underline sm:w-[250px] w-full text-sm sm:text-base">
+                        {a?.title?.slice(0, 50)}
+                      </p>
                     </a>
                   </div>
                 ))}
