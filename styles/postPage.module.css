@@ -119,6 +119,10 @@
   width: 50px;
 }
 @media only screen and (max-width: 778px) {
+  .mainContainer {
+    display: flex;
+    flex-direction: column;
+  }
   .breadcrumbs {
     font-size: 10px;
     gap: 3px;
@@ -128,7 +132,16 @@
     padding: 2%;
   }
   .othersLink {
-    display: none;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+  .othersLinkContainer {
+    width: 95%;
+  }
+  .othersLinkImage {
+    width: 100%;
+    height: auto;
   }
   .freepostTitle,
   .freepostTitle2,
