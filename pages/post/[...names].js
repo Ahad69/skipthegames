@@ -850,7 +850,7 @@ const Post = () => {
                   </div>
                 </div>
 
-                <div className={style.othersLink}>
+                  <div className={style.othersLink}>
                   {ads.map((a) => (
                     <div className={style.othersLinkContainer} key={a._id}>
                       <a href={`${a.link}`} target="_blank" rel="noreferrer">
@@ -861,7 +861,9 @@ const Post = () => {
                           height={800}
                           alt="image"
                         />
-                        <p className="text-blue-400">{a.title}</p>
+                        <p className="text-blue-400 underline sm:w-[250px] w-full text-sm sm:text-base">
+                          {a?.title?.slice(0, 50)}
+                        </p>
                       </a>
                     </div>
                   ))}
