@@ -25,6 +25,7 @@ export default function Home() {
           name="google-site-verification"
           content="LY6Z48B7wRP_Hrd7cDAs3wQjh83MGwWSv8hHQd6Ue6o"
         />
+        <meta name="tlsdk" content="90c01e78bd56459db4fa068765c5fdeb"></meta>
       </Head>
 
       <main className={styles.main}>
