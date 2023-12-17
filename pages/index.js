@@ -11,13 +11,28 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Skip The Games</title>
-        <meta name="description" content="Ad Back List" />
+        <title>
+          Skip the Games Your Go To Destination for Fun and female escort 
+        </title>
+        <meta
+          name="description"
+          content="Find the ultimate pleasure without the hassle. Skip the games and discover top-notch female escorts in CT, N.C, NJ, and more. 
+Indulge in a discreet and unforgettable experience with Escort Dude. Explore Tryst San Antonio escorts for an adventure like no other. 
+Satisfaction guaranteed!"
+        />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         {/* <meta
           name="google-site-verification"
           content="TYiSHLlk3Y-BJ095SPo4lMOG4hSRTUyxfIKdLR-_sfs"
         /> */}
+        <meta
+          name="title"
+          content="Skip the Games Your Go To Destination for Fun and female escort "
+        />
+        <meta
+          name="keywords"
+          content="Skip the Games, female escort, Tryst San Antonio escorts, skipthe games, skip yhe games, akip the games"
+        />
         <link rel="icon" href="/favicon.ico" />
 
         {/* <link rel="icon" href="/logo.png" /> */}
