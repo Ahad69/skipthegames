@@ -2,29 +2,28 @@
 /*
  * v. 1.0.5
  */
-'use strict';
+"use strict";
 
-self.addEventListener('push', (event) => {
+self.addEventListener("push", (event) => {
   var push = JSON.parse(event.data.text());
 
-  if (push.data.hasOwnProperty('pixel') && validURL(push.data.pixel)) {
+  if (push.data.hasOwnProperty("pixel") && validURL(push.data.pixel)) {
     var pixelUrl = push.data.pixel;
     var getTrackingPixelPromise = getTrackingPixel(pixelUrl);
     var showPushNotificationPromise = showPushNotification(push);
     var promiseChain = Promise.all([
       getTrackingPixelPromise,
-      showPushNotificationPromise
+      showPushNotificationPromise,
     ]);
     event.waitUntil(promiseChain);
-  }
-  else {
+  } else {
     event.waitUntil(showPushNotification(push));
-  };
+  }
 });
 
 function showPushNotification(push) {
   var tag = push.data.tag;
-  if (tag && tag.startsWith('service_message')) {
+  if (tag && tag.startsWith("service_message")) {
     return;
   }
 
@@ -39,28 +38,35 @@ function showPushNotification(push) {
     },
     image: push.data.attachment_url,
     tag: push.data.tag,
-    requireInteraction: (push.data.ri === 'true' || push.data.ri === true),
+    requireInteraction: push.data.ri === "true" || push.data.ri === true,
   };
 
-  if (push.data.hasOwnProperty('actions')) {
-    var actions = Array.isArray(push.data.actions) ? push.actions : JSON.parse(push.data.actions);
+  if (push.data.hasOwnProperty("actions")) {
+    var actions = Array.isArray(push.data.actions)
+      ? push.actions
+      : JSON.parse(push.data.actions);
     if (actions) {
-      notificationOptions.actions = actions.filter((action) => action.title != null);
+      notificationOptions.actions = actions.filter(
+        (action) => action.title != null
+      );
     }
   }
 
-  var notificationPromise = self.registration.showNotification(title, notificationOptions);
+  var notificationPromise = self.registration.showNotification(
+    title,
+    notificationOptions
+  );
 
   return notificationPromise;
-};
+}
 
 function getTrackingPixel(url) {
   var getTrackingPixelPromise = fetch(url);
   return getTrackingPixelPromise;
-};
+}
 
-self.addEventListener('notificationclick', function (event) {
-  var target = event.notification.data.click_action || '/';
+self.addEventListener("notificationclick", function (event) {
+  var target = event.notification.data.click_action || "/";
   event.notification.close();
   if (event.action) {
     target = getTargetWithAction(target, event);
@@ -79,11 +85,14 @@ function getTargetWithAction(target, event) {
 }
 
 function validURL(url) {
-  var pattern = new RegExp('^(https?:\\/\\/)?' +
-    '((([a-z\\d]([a-z\\d-]*[a-z\\d])*)\\.)+[a-z]{2,}|' +
-    '((\\d{1,3}\\.){3}\\d{1,3}))' +
-    '(\\:\\d+)?(\\/[-a-z\\d%_.~+]*)*' +
-    '(\\?[;&a-z\\d%_.~+=-]*)?' +
-    '(\\#[-a-z\\d_]*)?$', 'i');
+  var pattern = new RegExp(
+    "^(https?:\\/\\/)?" +
+      "((([a-z\\d]([a-z\\d-]*[a-z\\d])*)\\.)+[a-z]{2,}|" +
+      "((\\d{1,3}\\.){3}\\d{1,3}))" +
+      "(\\:\\d+)?(\\/[-a-z\\d%_.~+]*)*" +
+      "(\\?[;&a-z\\d%_.~+=-]*)?" +
+      "(\\#[-a-z\\d_]*)?$",
+    "i"
+  );
   return !!pattern.test(url);
-};
+}
