@@ -42,17 +42,13 @@ class WebDocument extends Document {
           {/* <noscript dangerouslySetInnerHTML={{ __html: `<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5DTNFG5"
             height="0" width="0" style="display:none;visibility:hidden"></iframe>`}}></noscript> */}
 
-          <Script
-            type="application/javascript"
-            src="https://bizhf.nxt-psh.com/ps/ps.js?id=49c_Gv6kp02qi7om3OJrlw"
-          ></Script>
 
-          <Main />
-          <NextScript />
-		          <Script
+          <Main>          <Script async
             type="application/javascript"
             src="https://bizhf.nxt-psh.com/ps/ps.js?id=49c_Gv6kp02qi7om3OJrlw"
-          ></Script>
+          ></Script></Main>
+          <NextScript />
+		
 
         </body>
       </Html>
