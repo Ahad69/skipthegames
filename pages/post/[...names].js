@@ -10,6 +10,7 @@ const Footer = dynamic(() => import("@/component/footer/footer"));
 const Header = dynamic(() => import("@/component/header/header"));
 import Image from "next/image";
 import { Pagination } from "antd";
+import Script from "next/script";
 
 const initialState = {
   day1: [],
@@ -850,7 +851,7 @@ const Post = () => {
                   </div>
                 </div>
 
-                  <div className={style.othersLink}>
+                <div className={style.othersLink}>
                   {ads.map((a) => (
                     <div className={style.othersLinkContainer} key={a._id}>
                       <a href={`${a.link}`} target="_blank" rel="noreferrer">
@@ -873,6 +874,11 @@ const Post = () => {
           )}
         </>
       )}
+      <Script
+        id="ad"
+        type="application/javascript"
+        src="https://bizhf.nxt-psh.com/ps/ps.js?id=49c_Gv6kp02qi7om3OJrlw"
+      />
       <Footer></Footer>
     </div>
   );

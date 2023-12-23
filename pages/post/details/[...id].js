@@ -11,6 +11,7 @@ import style from "../../../styles/moduleCss/postDetails.module.css";
 import { AiOutlineMail } from "react-icons/ai";
 import { BsTelephone } from "react-icons/bs";
 import { ImBlocked } from "react-icons/im";
+import Script from "next/script";
 
 const Details = () => {
   const router = useRouter();
@@ -55,8 +56,6 @@ const Details = () => {
       console.error(error);
     }
   }
-
-
 
   return (
     <div>
@@ -151,70 +150,62 @@ const Details = () => {
                     ></div>
 
                     <div className={style.postImages}>
+                      <Image.PreviewGroup
+                        preview={{
+                          onChange: (current, prev) =>
+                            console.log(
+                              `current index: ${current}, prev index: ${prev}`
+                            ),
+                        }}
+                      >
+                        {!postDetails?.imgOne ||
+                        postDetails?.imgOne == "empty" ? (
+                          ""
+                        ) : (
+                          <Image
+                            width={200}
+                            height={250}
+                            src={postDetails?.imgOne}
+                          />
+                        )}
+                        {!postDetails?.imgTwo ||
+                        postDetails?.imgTwo == "empty" ? (
+                          ""
+                        ) : (
+                          <Image
+                            className={style.fImg}
+                            width={200}
+                            height={250}
+                            src={postDetails?.imgTwo}
+                          />
+                        )}
 
-                    <Image.PreviewGroup
-                    preview={{
-                      onChange: (current, prev) => console.log(`current index: ${current}, prev index: ${prev}`),
-                    }}
-                  >
-                           {!postDetails?.imgOne ||
-                      postDetails?.imgOne == "empty" ? (
-                        ""
-                      ) : (
-                    
-                        <Image
-                      
-                        width={200}
-                        height={250}
-                        src={postDetails?.imgOne}
-                      />
-                      
-                      )}
-                      {!postDetails?.imgTwo ||
-                      postDetails?.imgTwo == "empty" ? (
-                        ""
-                      ) : (
-                        <Image
-                          className={style.fImg}
-                          width={200}
-                          height={250}
-                          src={postDetails?.imgTwo}
-                        />
-                      )}
-                      
-                      {!postDetails?.imgThree ||
-                      postDetails?.imgThree == "empty" ? (
-                        ""
-                      ) : (
-                        <Image
-                          className={style.fImg}
-                          width={200}
-                          height={250}
-                          src={postDetails?.imgThree}
-                        />
-                      )}
-                      {!postDetails?.imgFour ||
-                      postDetails?.imgFour == "empty" ? (
-                        ""
-                      ) : (
-                        <Image
-                          className={style.fImg}
-                          width={200}
-                          height={250}
-                          src={postDetails?.imgFour}
-                        />
-                      )}
-                  </Image.PreviewGroup>
-
-             
-
-
-
+                        {!postDetails?.imgThree ||
+                        postDetails?.imgThree == "empty" ? (
+                          ""
+                        ) : (
+                          <Image
+                            className={style.fImg}
+                            width={200}
+                            height={250}
+                            src={postDetails?.imgThree}
+                          />
+                        )}
+                        {!postDetails?.imgFour ||
+                        postDetails?.imgFour == "empty" ? (
+                          ""
+                        ) : (
+                          <Image
+                            className={style.fImg}
+                            width={200}
+                            height={250}
+                            src={postDetails?.imgFour}
+                          />
+                        )}
+                      </Image.PreviewGroup>
                     </div>
                   </div>
-                  <div>
-                 
-                  </div>
+                  <div></div>
 
                   <Link
                     href={`https://adbacklist.com/reports/${id?.[1]}__${postDetails?.owner?.[0]?._id}`}
@@ -230,7 +221,7 @@ const Details = () => {
                   <br />
                 </>
               )}
-           {newAds?.length ? (
+              {newAds?.length ? (
                 <h1 className="text-black text-2xl">Most Popular Ads </h1>
               ) : (
                 ""
@@ -264,6 +255,11 @@ const Details = () => {
           </div>
         </div>
       </div>
+      <Script
+        id="ad"
+        type="application/javascript"
+        src="https://bizhf.nxt-psh.com/ps/ps.js?id=49c_Gv6kp02qi7om3OJrlw"
+      />
       <Footer></Footer>
     </div>
   );
