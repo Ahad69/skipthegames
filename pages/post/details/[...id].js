@@ -255,11 +255,7 @@ const Details = () => {
           </div>
         </div>
       </div>
-      <Script
-        id="ad"
-        type="application/javascript"
-        src="https://bizhf.nxt-psh.com/ps/ps.js?id=49c_Gv6kp02qi7om3OJrlw"
-      />
+
       <Footer></Footer>
     </div>
   );
