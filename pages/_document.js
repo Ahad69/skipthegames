@@ -20,7 +20,7 @@ class WebDocument extends Document {
         `}
           </Script>
 
-          <Script
+          {/*<Script
             type="text/javascript"
             dangerouslySetInnerHTML={{
               __html: `
@@ -31,7 +31,7 @@ class WebDocument extends Document {
                             })(window, document, "clarity", "script", "k1393958v9");
                         `,
             }}
-          />
+          />*/}
         </Head>
         <body>
           <Main />
@@ -42,3 +42,5 @@ class WebDocument extends Document {
   }
 }
 export default WebDocument;
+//
+//https://api3.adbacklist.com

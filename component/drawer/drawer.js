@@ -14,12 +14,10 @@ const Drawer = (data) => {
   const [city, setCity] = useState();
   const [user, setUser] = useState();
 
-
-
   async function getUser() {
     try {
       const response = await axios.get(
-        `https://api-adbacklist.vercel.app/api/countries/search?q=${data?.category}`
+        `https://api3.adbacklist.com/api/countries/search?q=${data?.category}`
       );
       const cityName = response.data;
       const usa = cities.find((a) => a.name == "United States");
@@ -73,7 +71,7 @@ const Drawer = (data) => {
           <div>
             <div className={style.postMenu}>
               <Link
-                href="https://adbacklist.com/user/post"
+                href="/user/post/"
                 className="post-profile__btn flex items-center flex-shrink-0 p-l-5 p-r-10"
               >
                 <div className="icon d-inline-flex align-items-center justify-content-center m-r-5">
@@ -106,7 +104,16 @@ const Drawer = (data) => {
           ) : (
             " "
           )}
-        
+          {router.asPath.includes("/dashboard") && (
+            <>
+              {" "}
+              {data.avater == "avater" ? (
+                <Image className={style.avater} src="user.png" />
+              ) : (
+                <Image className={style.avater} src={data.avater} />
+              )}
+            </>
+          )}
         </div>
       </div>
     );

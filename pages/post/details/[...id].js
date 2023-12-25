@@ -11,6 +11,7 @@ import style from "../../../styles/moduleCss/postDetails.module.css";
 import { AiOutlineMail } from "react-icons/ai";
 import { BsTelephone } from "react-icons/bs";
 import { ImBlocked } from "react-icons/im";
+import { findPostMeta } from "@/component/postmeta";
 import Script from "next/script";
 
 const Details = () => {
@@ -34,22 +35,21 @@ const Details = () => {
   async function getUser(id) {
     try {
       const response = await axios.get(
-        `https://api-adbacklist.vercel.app/api/products/${id?.[1]}`
+        `https://api3.adbacklist.com/api/products/${id?.[1]}`
       );
       setPost(response.data.data.product[0]);
       setLoading(false);
     } catch (error) {
       setLoading(false);
-      console.log(error);
+      console.error(error);
     }
   }
 
   async function getAds() {
     try {
-      const response = await axios.get(
-        `https://api-adbacklist.vercel.app/api/sideads`
-      );
+      const response = await axios.get(`https://api3.adbacklist.com/api/sideads`);
       const data = response.data.ads;
+
       const category = data.filter((a) => a?.category == id?.[0]).slice(0, 6);
       setAds(category);
     } catch (error) {
@@ -57,11 +57,21 @@ const Details = () => {
     }
   }
 
+  const meta = findPostMeta(router.query);
+
   return (
     <div>
       <Head>
         <link rel="icon" href="/logo.png" />
-        <title>Post Details</title>
+        <title>{postDetails?.name?.slice(0, 65)}</title>
+
+        <meta name="title" content={`${postDetails?.name?.slice(0, 65)}`} />
+        <meta
+          name="description"
+          content={`${postDetails?.description?.slice(0, 318)}`}
+        />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="keywords" content={`${meta?.keywords}`} />
       </Head>
       <div className="drawer">
         <input id="my-drawer" type="checkbox" className="drawer-toggle" />
@@ -74,7 +84,7 @@ const Details = () => {
               <div>
                 <div className={style.postMenu}>
                   <Link
-                    href="https://adbacklist.com/user/post"
+                    href=" /user/post/"
                     className="post-profile__btn flex items-center flex-shrink-0 p-l-5 p-r-10"
                   >
                     <div className="icon d-inline-flex align-items-center justify-content-center m-r-5">
@@ -105,9 +115,7 @@ const Details = () => {
           <div className="bg-gray-100 pb-5 pt-5">
             <div className="m-5 p-3 bg-white">
               {loading ? (
-                <div className="btn  bg-transparent border-0 loading flex m-auto">
-                  loading
-                </div>
+                <img className="block m-auto" width={100} src="/loader.gif" />
               ) : (
                 <>
                   <h1 className="text-lg text-black font-bold sm:text-2xl ">
@@ -139,6 +147,23 @@ const Details = () => {
                       ""
                     )}{" "}
                   </div>
+
+                  <div className="border-4 rounded border-dashed border-green-600 mt-10 w-full m-auto sm:w-3/5">
+                    <h1 className="text-red-600 font-bold text-center sm:text-3xl text-base ">
+                      SCAM Alert !!!!!
+                    </h1>
+                    <p className="font-bold text-center sm:text-base text-xs">
+                      If ad poster asks for money, credit card info, cashapp,
+                      gift card or tell you to verify in another website,
+                      consider its a SCAM !
+                      <br />
+                      Don't pay anything before meet the Provider!
+                    </p>
+                  </div>
+                  <div className="bg-blue-200 mt-2 text-center py-2 mb-5  w-full m-auto sm:w-3/5 sm:text-base text-xs ">
+                    When you call, tell me that you saw my ad on SKIPTHEGAMES
+                  </div>
+
                   <hr />
 
                   <div className={style.contentContainer}>
@@ -158,16 +183,6 @@ const Details = () => {
                             ),
                         }}
                       >
-                        {!postDetails?.imgOne ||
-                        postDetails?.imgOne == "empty" ? (
-                          ""
-                        ) : (
-                          <Image
-                            width={200}
-                            height={250}
-                            src={postDetails?.imgOne}
-                          />
-                        )}
                         {!postDetails?.imgTwo ||
                         postDetails?.imgTwo == "empty" ? (
                           ""
@@ -191,6 +206,18 @@ const Details = () => {
                             src={postDetails?.imgThree}
                           />
                         )}
+
+                        {!postDetails?.imgOne ||
+                        postDetails?.imgOne == "empty" ? (
+                          ""
+                        ) : (
+                          <Image
+                            className={style.fImg}
+                            width={200}
+                            height={250}
+                            src={postDetails?.imgOne}
+                          />
+                        )}
                         {!postDetails?.imgFour ||
                         postDetails?.imgFour == "empty" ? (
                           ""
@@ -205,13 +232,12 @@ const Details = () => {
                       </Image.PreviewGroup>
                     </div>
                   </div>
-                  <div></div>
 
                   <Link
-                    href={`https://adbacklist.com/reports/${id?.[1]}__${postDetails?.owner?.[0]?._id}`}
+                    href={`/reports/${id?.[1]}__${postDetails?.owner?.[0]?._id}`}
                   >
                     <button className="flex items-center justify-center bg-red-500 text-white px-2 font-bold border rounded">
-                      <ImBlocked className="text-xl mr-2 cursor-pointer" />{" "}
+                      <ImBlocked className="text-xl mr-2 cursor-pointer" /> Ad
                       Report
                     </button>
                   </Link>
@@ -221,6 +247,7 @@ const Details = () => {
                   <br />
                 </>
               )}
+
               {newAds?.length ? (
                 <h1 className="text-black text-2xl">Most Popular Ads </h1>
               ) : (
@@ -243,13 +270,6 @@ const Details = () => {
                     </a>
                   </div>
                 ))}
-              </div>
-              <div className="bg-yellow-100 p-5">
-                <h1 className="text-red-600 font-bold">Warning!!!!</h1>
-                <p className="font-bold">
-                  Use your unusual feel earlier than making any pre-payment, We
-                  will not be responsible for any financial loss!
-                </p>
               </div>
             </div>
           </div>

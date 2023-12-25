@@ -20,9 +20,9 @@ const AboutUs = () => {
           <h1 className="text-xl font-bold sm:text-3xl">About Us</h1>
             <hr />
           <p className="mt-5">
-             SKIPTHEGAMES is the most extensive Backpage Alternative currently!
+             Ad Back List is the most extensive Backpage Alternative currently!
             Do you want to find the most accessible backpage replacement
-            websites? You are not the only one! SKIPTHEGAMES will make you happy like
+            websites? You are not the only one! Ad Back List will make you happy like
             Backpages. Backpage was once the best online place to post personal
             or classified ads. It had everything, electronics, events and
             vacancy alerts. The land was also available.
@@ -52,22 +52,22 @@ const AboutUs = () => {
           <h1 className="text-xl font-bold sm:text-3xl">Backpage alternative websites</h1>
           <hr />
           <p className="mt-5">
-            SKIPTHEGAMES has an inclination to ease to show your business in an
+            Ad Back List has an inclination to ease to show your business in an
             efficient manner. Many service providers have seen substantial
             growth in their company with the aid of free classified site. If
             you've got been sorting out partner level option to backpage, you've
             got discovered the finest backpage alternative and{" "}
-            <strong>craigslist personals</strong> alternative site, SKIPTHEGAMES
+            <strong>craigslist personals</strong> alternative site, Ad Back List
             categorized.
           </p>
           <br />
           <br />
-          <h2 className="text-xl font-bold sm:text-3xl">Why should you select SKIPTHEGAMES?</h2>
+          <h2 className="text-xl font-bold sm:text-3xl">Why should you select Ad Back List?</h2>
           <hr />
           <p  className="mt-5">
             Best location in brand awareness Getting individuals to understand
             concerning your company might be worn the most efficient way through
-            classified advertisements on SKIPTHEGAMES. We have a propensity to aid
+            classified advertisements on Ad Back List. We have a propensity to aid
             you to be successful in your potential customers. You will be able
             to create leads for your organization by posting free classified
             advertisements here. Once your profile is created you'll be able to
@@ -82,22 +82,22 @@ const AboutUs = () => {
             Sadly, United States close up backpage classified website within the
             early 2019 for SESTA/FOSTA laws & allegation of sex trafficking
             advertisements in its adult classified part. When the ending of the
-            majority of well-liked US classified website backpage.com, SKIPTHEGAMES
+            majority of well-liked US classified website backpage.com, Ad Back List
             categorized launched to interchange backpage as a categorized
             internet site.
             <strong>Free classified advertisements</strong> sites are an
             excellent thanks to take the business to succeeding level and a
             crucial part of their digital selling strategy of the many
             companies. Thousands of free classified advertisements are being
-            denoted on SKIPTHEGAMES categorized regularly as a{" "}
+            denoted on Ad Back List categorized regularly as a{" "}
             <strong>backpage personals classified site</strong>.{" "}
           </p>  <br />
           <p>
             Whatever you're trying to find, you may realize many classified ads
-            in your city, in SKIPTHEGAMES advertisements. All you have got to attempt
+            in your city, in Ad Back List advertisements. All you have got to attempt
             to do would be to pick your location category/sub-category to search
-            out the best deals offered by SKIPTHEGAMES classified advertisers.
-            SKIPTHEGAMES supplies you with one perfect platform for reaching intent
+            out the best deals offered by Ad Back List classified advertisers.
+            Ad Back List supplies you with one perfect platform for reaching intent
             on many shoppers online. We tend to assist in displaying your system
             in a great way. Several service providers have been manipulation our{" "}
             <strong>free classified site</strong> for managing and growing their
@@ -106,11 +106,11 @@ const AboutUs = () => {
             are at the proper location. For growing your business and taking it
             into a complete new degree, set up for sale on the
             <strong>
-              <Link href="/" className="text-blue-400">SKIPTHEGAMES</Link>
+              <Link href="/" className="text-blue-400">Ad Back List</Link>
             </strong>
             . This fashion you'll have the ability to connect with your target
             market and just get business online.Collect more leads from
-            SKIPTHEGAMES.com is the replacement for backpage wherever you'll post
+            Ad Back List.com is the replacement for backpage wherever you'll post
             free classified advertisements to drive your companies or providers
             on the internet.
           </p>

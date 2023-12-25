@@ -1,23 +1,22 @@
-
 import dynamic from "next/dynamic";
 import Head from "next/head";
 import Link from "next/link";
 import React from "react";
 const Footer = dynamic(() => import("@/component/footer/footer"));
 const Header = dynamic(() => import("@/component/header/header"));
-
+//https://api3.adbacklist.com
 const ContactUs = () => {
   return (
     <div>
-        <Head>
-            <title>
-            <link rel="icon" href="/logo.png" />
-                Contact Us
-            </title>
-        </Head>
-        <Header />
+      <Head>
+        <title>
+          <link rel="icon" href="/logo.png" />
+          Contact Us
+        </title>
+      </Head>
+      <Header />
       <div className="w-11/12 m-auto pt-10 sm:w-5/6">
-        <h1  className="text-xl font-bold sm:text-3xl text-white">Contact Us</h1>
+        <h1 className="text-xl font-bold sm:text-3xl text-white">Contact Us</h1>
         <hr />
         <br />
         <p>
@@ -26,12 +25,12 @@ const ContactUs = () => {
           contact us anytime to get assistance and solutions. We provide the
           best assistance and responsiveness. Our customers are happy with our
           support and work in addition. We're always eager to help you. Tell us
-          about your problem and how we can assist you! SKIPTHEGAMES Customer support
-          is offered at no cost. We are available all day, so you don't have to
-          worry about response times. Contact us anytime, and you will receive
-          the best service. Live support agents are available 24/7 to help with
-          any questions you might need! So chat with us and find the best
-          solution!
+          about your problem and how we can assist you! Ad Back List Customer
+          support is offered at no cost. We are available all day, so you don't
+          have to worry about response times. Contact us anytime, and you will
+          receive the best service. Live support agents are available 24/7 to
+          help with any questions you might need! So chat with us and find the
+          best solution!
         </p>
         <br />
         <strong>Live Chat</strong>
@@ -40,17 +39,18 @@ const ContactUs = () => {
           all questions you may have.{" "}
         </p>
         <strong>Contact Us : </strong>
-        <strong>DIS PVT LTD</strong>
-        <p>Address:- 1530 LOCKE RD, MODESTO, CA 95355, USA</p>
-        <strong>Email - SKIPTHEGAMES85@gmail.com</strong>
+        <strong>Email - adbacklist@gmail.com</strong>
+
         <br />
         <br />
         <br />
-        <h1  className="text-xl font-bold sm:text-3xl text-white">Contact Best Website similar to Backpage [SKIPTHEGAMES] </h1>
+        <h1 className="text-xl font-bold sm:text-3xl text-white">
+          Contact Best Website similar to Backpage [Ad Back List]{" "}
+        </h1>
         <hr />
         <br />
         <p>
-          SKIPTHEGAMES is the most popular{" "}
+          Ad Back List is the most popular{" "}
           <Link href="/" target="_self" className="text-blue-400">
             backpage replacement
           </Link>{" "}
@@ -59,7 +59,7 @@ const ContactUs = () => {
             similar to Backpage
           </Link>
           . Are you looking for the most straightforward alternative sites to
-          Backpage? It's not all alone! SKIPTHEGAMES will ensure that you are
+          Backpage? It's not all alone! Ad Back List will ensure that you are
           satisfied with Backpages. The site was once the best online site for
           personal or commercial ads; Backpage was a one-stop shop for
           everything from electronics to events, alerts for vacant land, and
@@ -74,7 +74,9 @@ const ContactUs = () => {
           finally means that they are over and entirely over?
         </p>
         <br />
-        <h2 className="text-xl font-bold sm:text-3xl text-white">Similar to Backpage Websites [SKIPTHEGAMES]</h2>
+        <h2 className="text-xl font-bold sm:text-3xl text-white">
+          Similar to Backpage Websites [Ad Back List]
+        </h2>
         <hr />
         <br />
         <p>

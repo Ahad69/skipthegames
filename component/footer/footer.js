@@ -78,47 +78,78 @@ const Footer = () => {
           </ul>
           <ul className={style.footer}>
             <li className={style.item}>
-              <Link href={"https://adbacklist.com/"}>Skip the Games </Link>
-            </li>
-            <li className={style.item}>
-              <Link href={"https://adbacklist.com/"}>female escort</Link>
-            </li>
-            <li className={style.item}>
-              <Link href={"https://adbacklist.com/"}>
-                Tryst San Antonio escorts
+              <Link href={"/sites-similar-to-backpage"}>
+                Sites similar to Backpage{" "}
               </Link>
             </li>
             <li className={style.item}>
-              <Link href={"https://adbacklist.com/"}>skipthe games</Link>
+              <Link href={"/sites-like-craiglist"}>Sites like craigslist</Link>
             </li>
             <li className={style.item}>
-              <Link href={"https://adbacklist.com/"}> skip yhe games</Link>
+              <Link href={"/"}>Bedpage escort</Link>
             </li>
             <li className={style.item}>
-              <Link href={"https://adbacklist.com/"}>akip the games</Link>
+              <Link href={"/mega-personalservice"}>Mega personalservice</Link>
+            </li>
+            <li className={style.item}>
+              <Link href={"/mega-personal"}>Megapasonal</Link>
+            </li>
+            <li className={style.item}>
+              <Link href={"/mega-personal-dating"}>Mega personal dating</Link>
+            </li>
+            <li className={style.item}>
+              <Link href={"/"}>Megapersonals classified</Link>
+            </li>
+            <li className={style.item}>
+              <Link href={"/bedpage-alternatives"}>Bedpage alternatives</Link>
+            </li>
+            <li className={style.item}>
+              <Link href={"/mega-personal-classified"}>
+                Mega personal classified
+              </Link>
+            </li>
+            <li className={style.item}>
+              <Link href={"/independent-escots"}>Independent escots</Link>
+            </li>
+            <li className={style.item}>
+              <Link href={"/"}>Queens Escort</Link>
+            </li>
+            <li className={style.item}>
+              <Link href={"/skip-the-games"}>Skip the games</Link>
+            </li>
+            <li className={style.item}>
+              <Link href={"/queens-backpahe"}>Queens Backpahe</Link>
+            </li>
+            <li className={style.item}>
+              <Link href={"/similar-to-backpage"}>
+                Website similar to Backpage
+              </Link>
+            </li>
+            <li className={style.item}>
+              <Link href={"/backpage-hookup"}>Backpage hook up</Link>
             </li>
           </ul>
           <br />
           <br />
           <ul className={style.footer}>
-            <li className={style.item}>
+            {/* <li className={style.item}>
               <Link
                 href="https://www.youtube.com/channel/UC8vWO9MILlY-Sv9ezGaB6WQ"
                 target={"_blank"}
                 rel="noopener noreferrer"
                 className="link text-uppercase"
-                title="Terms"
+                title="Youtube"
               >
                 <BsYoutube className={style.insta} />
               </Link>
-            </li>
+            </li> */}
             <li className={style.item}>
               <Link
                 href="https://www.facebook.com/profile.php?id=100091135910066"
                 target={"_blank"}
                 rel="noopener noreferrer"
                 className="link text-uppercase"
-                title="Terms"
+                title="Facebook"
               >
                 <AiFillFacebook className={style.facebook} />
               </Link>
@@ -129,7 +160,7 @@ const Footer = () => {
                 target={"_blank"}
                 rel="noopener noreferrer"
                 className="link text-uppercase"
-                title="Terms"
+                title="Instagram"
               >
                 <AiFillInstagram className={style.insta} />
               </Link>
@@ -140,7 +171,7 @@ const Footer = () => {
                 target={"_blank"}
                 rel="noopener noreferrer"
                 className="link text-uppercase"
-                title="Terms"
+                title="Twitter"
               >
                 <AiFillTwitterSquare className={style.facebook} />
               </Link>
@@ -152,7 +183,7 @@ const Footer = () => {
                 target={"_blank"}
                 rel="noopener noreferrer"
                 className="link text-uppercase"
-                title="Terms"
+                title="Pinterest"
               >
                 <BsPinterest className={style.insta} />
               </Link>
@@ -160,6 +191,7 @@ const Footer = () => {
           </ul>
         </div>
       </footer>
+      <p className="text-center mt-8">Copyright © 2009 - 2023 </p>
     </div>
   );
 };

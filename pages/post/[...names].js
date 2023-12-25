@@ -10,6 +10,7 @@ const Footer = dynamic(() => import("@/component/footer/footer"));
 const Header = dynamic(() => import("@/component/header/header"));
 import Image from "next/image";
 import { Pagination } from "antd";
+import { findMeta } from "../../component/categorymeta";
 import Script from "next/script";
 
 const initialState = {
@@ -46,12 +47,12 @@ const Post = () => {
 
   const [page, setPage] = useState(1);
 
-  console.log(freeCityPost, "Asdfa");
+  const meta = findMeta(router?.query?.names);
 
   async function getPosts() {
     try {
       const response = await axios.get(
-        `https://api-adbacklist.vercel.app/api/products/all?page=${page}&category=${router?.query?.names?.[2]}&state=${router?.query?.names[0]}`
+        `https://api3.adbacklist.com/api/products/all?page=${page}&category=${router?.query?.names?.[2]}&state=${router?.query?.names[0]}`
       );
 
       setPages(response.data.pages);
@@ -145,12 +146,12 @@ const Post = () => {
   async function getAds() {
     try {
       const response = await axios.get(
-        `https://api-adbacklist.vercel.app/api/sideads`
+        `https://api3.adbacklist.com/api/sideads`
       );
       const data = response.data.ads;
-      const category = data
-        .filter((a) => a?.category == router?.query?.names?.[1])
-        .slice(0, 4);
+      const category = data.filter(
+        (a) => a?.category == router?.query?.names?.[1]
+      );
       setAds(category);
     } catch (error) {
       console.error(error);
@@ -191,12 +192,19 @@ const Post = () => {
     setAge(useOld);
   }, [reload]);
 
+  console.log(router.query.names?.[2]);
+  console.log(router.query.names?.[1]);
+
   return (
     <div className={style.container}>
       <Head>
-        <title> Posts</title>
+        <title>{meta?.title}</title>
 
         <link rel="icon" href="/logo.png" />
+        <meta name="title" content={`${meta?.title}`} />
+        <meta name="description" content={`${meta?.description}`} />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="keywords" content={`${meta?.keywords}`} />
       </Head>
       <Header data={router?.query?.names} />
 
@@ -278,7 +286,7 @@ const Post = () => {
                           <Link
                             target="_blank"
                             rel="noopener noreferrer"
-                            href={`/post/details/${router?.query?.names?.[1]}/${a._id}`}
+                            href={`/post/details/${router?.query?.names?.[1]}/${a._id}?city=${router.query.names?.[0]}&sub=${router.query.names?.[2]}`}
                             key={a._id}
                           >
                             <div className={style.productContainer}>
@@ -317,7 +325,7 @@ const Post = () => {
                                   <Link
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    href={`/post/details/${router?.query?.names?.[1]}/${p._id}`}
+                                    href={`/post/details/${router?.query?.names?.[1]}/${p._id}?city=${router.query.names?.[0]}&sub=${router.query.names?.[2]}`}
                                     key={p._id}
                                   >
                                     <div className={style.productContainer}>
@@ -355,7 +363,7 @@ const Post = () => {
                                 <Link
                                   target="_blank"
                                   rel="noopener noreferrer"
-                                  href={`/post/details/${router?.query?.names?.[1]}/${p._id}`}
+                                  href={`/post/details/${router?.query?.names?.[1]}/${p._id}?city=${router.query.names?.[0]}&sub=${router.query.names?.[2]}`}
                                   key={p._id}
                                 >
                                   <div className={style.productContainer}>
@@ -392,7 +400,7 @@ const Post = () => {
                                 <Link
                                   target="_blank"
                                   rel="noopener noreferrer"
-                                  href={`/post/details/${router?.query?.names?.[1]}/${p._id}`}
+                                  href={`/post/details/${router?.query?.names?.[1]}/${p._id}?city=${router.query.names?.[0]}&sub=${router.query.names?.[2]}`}
                                   key={p._id}
                                 >
                                   <div className={style.productContainer}>
@@ -428,7 +436,7 @@ const Post = () => {
                                 <Link
                                   target="_blank"
                                   rel="noopener noreferrer"
-                                  href={`/post/details/${router?.query?.names?.[1]}/${p._id}`}
+                                  href={`/post/details/${router?.query?.names?.[1]}/${p._id}?city=${router.query.names?.[0]}&sub=${router.query.names?.[2]}`}
                                   key={p._id}
                                 >
                                   <div className={style.productContainer}>
@@ -466,7 +474,7 @@ const Post = () => {
                                   <Link
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    href={`/post/details/${router?.query?.names?.[1]}/${p._id}`}
+                                    href={`/post/details/${router?.query?.names?.[1]}/${p._id}?city=${router.query.names?.[0]}&sub=${router.query.names?.[2]}`}
                                     key={p._id}
                                   >
                                     <div className={style.productContainer}>
@@ -504,7 +512,7 @@ const Post = () => {
                                 <Link
                                   target="_blank"
                                   rel="noopener noreferrer"
-                                  href={`/post/details/${router?.query?.names?.[1]}/${p._id}`}
+                                  href={`/post/details/${router?.query?.names?.[1]}/${p._id}?city=${router.query.names?.[0]}&sub=${router.query.names?.[2]}`}
                                   key={p._id}
                                 >
                                   <div className={style.productContainer}>
@@ -540,7 +548,7 @@ const Post = () => {
                                 <Link
                                   target="_blank"
                                   rel="noopener noreferrer"
-                                  href={`/post/details/${router?.query?.names?.[1]}/${p._id}`}
+                                  href={`/post/details/${router?.query?.names?.[1]}/${p._id}?city=${router.query.names?.[0]}&sub=${router.query.names?.[2]}`}
                                   key={p._id}
                                 >
                                   <div className={style.productContainer}>
@@ -576,7 +584,7 @@ const Post = () => {
                                 <Link
                                   target="_blank"
                                   rel="noopener noreferrer"
-                                  href={`/post/details/${router?.query?.names?.[1]}/${p._id}`}
+                                  href={`/post/details/${router?.query?.names?.[1]}/${p._id}?city=${router.query.names?.[0]}&sub=${router.query.names?.[2]}`}
                                   key={p._id}
                                 >
                                   <div className={style.productContainer}>
@@ -614,7 +622,7 @@ const Post = () => {
                             <div>
                               {p.isPremium == false ? (
                                 <Link
-                                  href={`/post/details/${router?.query?.names?.[1]}/${p._id}`}
+                                  href={`/post/details/${router?.query?.names?.[1]}/${p._id}?city=${router.query.names?.[0]}&sub=${router.query.names?.[2]}`}
                                   key={p._id}
                                 >
                                   <div className={style.productContainer}>
@@ -643,7 +651,7 @@ const Post = () => {
                             <div>
                               {p.isPremium == false ? (
                                 <Link
-                                  href={`/post/details/${router?.query?.names?.[1]}/${p._id}`}
+                                  href={`/post/details/${router?.query?.names?.[1]}/${p._id}?city=${router.query.names?.[0]}&sub=${router.query.names?.[2]}`}
                                   key={p._id}
                                 >
                                   <div className={style.productContainer}>
@@ -672,7 +680,7 @@ const Post = () => {
                             <div>
                               {p.isPremium == false ? (
                                 <Link
-                                  href={`/post/details/${router?.query?.names?.[1]}/${p._id}`}
+                                  href={`/post/details/${router?.query?.names?.[1]}/${p._id}?city=${router.query.names?.[0]}&sub=${router.query.names?.[2]}`}
                                   key={p._id}
                                 >
                                   <div className={style.productContainer}>
@@ -701,7 +709,7 @@ const Post = () => {
                             <div>
                               {p.isPremium == false ? (
                                 <Link
-                                  href={`/post/details/${router?.query?.names?.[1]}/${p._id}`}
+                                  href={`/post/details/${router?.query?.names?.[1]}/${p._id}?city=${router.query.names?.[0]}&sub=${router.query.names?.[2]}`}
                                   key={p._id}
                                 >
                                   <div className={style.productContainer}>
@@ -730,7 +738,7 @@ const Post = () => {
                             <div>
                               {p.isPremium == false ? (
                                 <Link
-                                  href={`/post/details/${router?.query?.names?.[1]}/${p._id}`}
+                                  href={`/post/details/${router?.query?.names?.[1]}/${p._id}?city=${router.query.names?.[0]}&sub=${router.query.names?.[2]}`}
                                   key={p._id}
                                 >
                                   <div className={style.productContainer}>
@@ -759,7 +767,7 @@ const Post = () => {
                             <div>
                               {p.isPremium == false ? (
                                 <Link
-                                  href={`/post/details/${router?.query?.names?.[1]}/${p._id}`}
+                                  href={`/post/details/${router?.query?.names?.[1]}/${p._id}?city=${router.query.names?.[0]}&sub=${router.query.names?.[2]}`}
                                   key={p._id}
                                 >
                                   <div className={style.productContainer}>
@@ -788,7 +796,7 @@ const Post = () => {
                             <div>
                               {p.isPremium == false ? (
                                 <Link
-                                  href={`/post/details/${router?.query?.names?.[1]}/${p._id}`}
+                                  href={`/post/details/${router?.query?.names?.[1]}/${p._id}?city=${router.query.names?.[0]}&sub=${router.query.names?.[2]}`}
                                   key={p._id}
                                 >
                                   <div className={style.productContainer}>
@@ -815,7 +823,7 @@ const Post = () => {
                             <div>
                               {p.isPremium == false ? (
                                 <Link
-                                  href={`/post/details/${router?.query?.names?.[1]}/${p._id}`}
+                                  href={`/post/details/${router?.query?.names?.[1]}/${p._id}?city=${router.query.names?.[0]}&sub=${router.query.names?.[2]}`}
                                   key={p._id}
                                 >
                                   <div className={style.productContainer}>
@@ -869,6 +877,24 @@ const Post = () => {
                     </div>
                   ))}
                 </div>
+
+                {/* <div className="grid sm:grid-cols-4 m-auto grid-cols-2">
+                  {newAds?.map((a) => (
+                    <div className="m-2 text-blue-600" key={a._id}>
+                      <a
+                        href={`${a?.link}`}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="text-blue-600"
+                      >
+                        <img src={a?.image} width={250} />
+                        <p className="text-blue-400 underline sm:w-[250px] w-full text-sm sm:text-base">
+                          {a?.title?.slice(0, 50)}
+                        </p>
+                      </a>
+                    </div>
+                  ))}
+                </div> */}
               </div>
             </div>
           )}

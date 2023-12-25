@@ -9,7 +9,7 @@
 }
 .country,
 .main {
-  background: #fff;
+  background: #ffffff;
 }
 .state {
   display: grid;
@@ -17,7 +17,8 @@
 .menu {
   display: flex;
   justify-content: space-around;
-  width: 50%;
+  align-items: center;
+  width: 60%;
 }
 .main {
   color: #000;
@@ -62,14 +63,14 @@
 }
 .countryBox {
   padding: 5px;
-  width: 50%;
+  width: 100%;
   float: left;
   box-sizing: border-box;
   zoom: 0;
   overflow: hidden;
   -webkit-column-count: 3;
   -moz-column-count: 3;
-  column-count: 3;
+  column-count: 4;
   color: #000;
   background: #fff;
   gap: 20px;
@@ -90,41 +91,32 @@
   background: #05baf1;
   margin-left: 10px;
 }
+
 @media only screen and (max-width: 768px) {
-    .container {
-        width: 95%;
-      }
-      .countryBox {
-        -webkit-column-count: 2;
-        -moz-column-count: 2;
-        column-count: 2;
-        width: 100%;
-        margin: auto;
-      }
-      .title {
-        font-size: 20px;
-      }
-      .postButton {
-        width: 80px;
-        font-size: 12px;
-        padding: 5px;
-        border-radius: 10px;
-        color: #fff;
-        font-weight: 500;
-        background: #05baf1;
-        margin-left: 20px;
-      }
-      .menu {
-        display: none;
-      }
-}
-.postButton {
-  width: 100px;
-  font-size: 17px;
-  padding: 5px;
-  border-radius: 10px;
-  color: #fff;
-  font-weight: 500;
-  margin-left: 10px;
-  background: #05baf1;
+  .container {
+    width: 95%;
+  }
+  .countryBox {
+    -webkit-column-count: 2;
+    -moz-column-count: 2;
+    column-count: 2;
+    width: 100%;
+    margin: auto;
+  }
+  .title {
+    font-size: 20px;
+  }
+  .postButton {
+    width: 80px;
+    font-size: 12px;
+    padding: 5px;
+    border-radius: 10px;
+    color: #fff;
+    font-weight: 500;
+    background: #05baf1;
+    margin-left: 20px;
+  }
+  .menu {
+    display: none;
+  }
 }

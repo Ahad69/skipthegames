@@ -16,7 +16,7 @@ html {
 .ant-upload,
 .ant-upload-list-item-container {
   width: 50% !important;
-  height: 200px !important;
+  height: 300px !important;
 }
 ::-webkit-scrollbar-thumb {
   background: #047699;
@@ -51,8 +51,7 @@ html {
 }
 .Australia,
 .Europe,
-.Latin,
-.United {
+.Latin {
   width: 50%;
 }
 .ant-btn {
@@ -90,4 +89,27 @@ html {
   .United {
     padding: 0px;
   }
+
+}
+.profile  .ant-upload-list-item-container{
+margin: auto !important;
+}
+.ahad{
+  background: red !important;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th,
+td {
+  border: 1px solid #c9c2c2;
+  text-align: left;
+  padding: 8px;
+}
+
+th {
+  background-color: #025a83;
 }

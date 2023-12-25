@@ -1,26 +1,23 @@
 import "@/styles/globals.css";
-import Script from "next/script";
+import { SessionProvider } from "next-auth/react";
+import { createContext, useState } from "react";
 
-export default function App({ Component, pageProps }) {
+export const MyContext = createContext();
+
+export default function App({
+  Component,
+  pageProps: { session, ...pageProps },
+}) {
+  const [blogcurrent, setBlogCurrent] = useState(1);
+  const [catKey, setCatKey] = useState("");
+
   return (
-    <>
-
-    {/* google tag manager  */}
-      <Script
-        async
-        // src="https://www.googletagmanager.com/gtag/js?id=UA-156492667-1"
-      />
-      <Script id="google-analytics" strategy="afterInteractive">
-        {/* {`
-       window.dataLayer = window.dataLayer || [];
-       function gtag(){dataLayer.push(arguments)}
-       gtag('js', new Date());
-     
-       gtag('config', 'UA-156492667-1');
-        `} */}
-      </Script>
-
-      <Component {...pageProps} />
-    </>
+    <SessionProvider session={session}>
+      <MyContext.Provider
+        value={{ blogcurrent, setBlogCurrent, catKey, setCatKey }}
+      >
+        <Component {...pageProps} />
+      </MyContext.Provider>
+    </SessionProvider>
   );
 }

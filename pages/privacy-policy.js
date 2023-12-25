@@ -17,7 +17,7 @@ const PrivacyPolicy = () => {
         <hr />
         <br />
         <strong>
-          SKIPTHEGAMES is a legal Classified Site to promote affiliates. You can put
+          Ad Back List is a legal Classified Site to promote affiliates. You can put
           up anything on the Site and find jobs. Below is our online Privacy
           Policy on this website:
         </strong>
@@ -28,14 +28,14 @@ const PrivacyPolicy = () => {
         <hr />
 
         <p className="mt-2">
-          We'd like to inform you that SKIPTHEGAMES will not accept any fraud or
-          scams and much more. SKIPTHEGAMES is a place open for all anyone is welcome
+          We'd like to inform you that Ad Back List will not accept any fraud or
+          scams and much more. Ad Back List is a place open for all anyone is welcome
           to post any information here. However, we have a particular rule to
           protect our customers and everyone else. It is not allowed to use
-          scams on SKIPTHEGAMES. If anyone uploads any photos and there is a
+          scams on Ad Back List. If anyone uploads any photos and there is a
           complaint regarding the photo or other personal concerns, We will
-          remove the image and take it down. SKIPTHEGAMES will always be your legal
-          protection. You can use SKIPTHEGAMES however you like and worry about
+          remove the image and take it down. Ad Back List will always be your legal
+          protection. You can use Ad Back List however you like and worry about
           privacy!
         </p>
         <br />

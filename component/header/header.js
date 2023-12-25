@@ -3,23 +3,25 @@ import React from "react";
 import style from "./header.module.css";
 
 const Header = ({ data }) => {
-
   return (
     <div className={style.container}>
       <div className={style.logo}>
         <Link href={`/`}>
-        <h1 className={style.title}>SKIPTHEGAMES</h1>
+          <h1 className={style.title}>SKIPTHEGAMES</h1>
         </Link>
-        <Link href={'https://adbacklist.com/user/post'}><button className={style.postButton}> + Add Post </button></Link>
+        <Link href={"/user/post"}>
+          <button className={style.postButton}> + Post Ad</button>
+        </Link>
       </div>
 
       <div className={style.location}>
-        {
-          data ?   <p>
-          {data?.[2]}, {data?.[1]}, {data?.[0]}
-        </p> : ""
-        }
-      
+        {data ? (
+          <p>
+            {data?.[2]}, {data?.[1]}, {data?.[0]}
+          </p>
+        ) : (
+          ""
+        )}
       </div>
     </div>
   );

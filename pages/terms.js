@@ -7,7 +7,6 @@ const Header = dynamic(() => import("@/component/header/header"));
 
 
 const Terms = () => {
-  const year = new Date().getFullYear()
   return (
     <div>
       <Head>
@@ -22,14 +21,14 @@ const Terms = () => {
         <hr />
         <br />
         <strong>
-          Updated January 01 , {year} <br />
+          Updated February 21, 2023 <br />
           <br />
           Objectives/Content:
         </strong>
         <p>
           The Site reserves the privilege to alter the Terms at any time and for
           almost any reason. Updated versions of the Conditions will undoubtedly
-          be submitted to the Site in SKIPTHEGAMES.com and also you should visit this
+          be submitted to the Site in Ad Back List.com and also you should visit this
           page periodically to keep apprised of any changes. By continuing to
           make use of the Site after any such change, you accept and agree on
           the modified Terms. You agree that the website will not be responsible
@@ -237,7 +236,7 @@ const Terms = () => {
         accurate and that you are the copyright or intellectual property owner
         or authorized to act on the copyright or intellectual property owner's
         behalf. 6. Our copyright representative can be attained as follows: 7.
-        Email: misuse@SKIPTHEGAMES.com (Remember to put Copyright Infringement in the
+        Email: misuse@Ad Back List.com (Remember to put Copyright Infringement in the
         subject line) The Site may, under suitable circumstances and in our
         discretion, disable or terminate the accounts of consumers who could be
         repeat infringers.
@@ -263,7 +262,7 @@ const Terms = () => {
         use of this Website; if you do not want to receive further
         communications by the Site (or its associates and partners), you need to
         terminate your registration by sending a cancellation note to get hold
-        of (@)SKIPTHEGAMES.com. In the event you opt to get mobile alarms regarding
+        of (@)Ad Back List.com. In the event you opt to get mobile alarms regarding
         any advertisement, you consent we may send automated texting into your
         cell telephone. If you don't want to receive such text messages, you
         ought not accept the mobile notifications choice. We will not mail you
@@ -411,7 +410,7 @@ const Terms = () => {
           website linked to by this Site. The section titles in these Terms are
           for convenience only and don't have any legal or contractual effect.
           Please report any violations of the Requirements to:
-          misuse@SKIPTHEGAMES.com
+          misuse@Ad Back List.com
           <br />
           <br />
           <strong>Severance and Waiver:</strong>
@@ -428,7 +427,7 @@ const Terms = () => {
           constitute a waiver of such right or provision unless acknowledged and
           agreed to from the website."
           <br />
-          SKIPTHEGAMES.com can be a web site (the “Site") that hosts categorized
+          Ad Back List.com can be a web site (the “Site") that hosts categorized
           advertisements and relevant articles created and manufactured with
           third party users. Your use of the website, for example most of
           access, features or services, is governed with these Conditions of Use
