@@ -31,7 +31,11 @@ Satisfaction guaranteed!"
         />
         <meta
           name="keywords"
-          content="Skip the Games, female escort, Tryst San Antonio escorts, skipthe games, skip yhe games, akip the games"
+          content="Skip the Games, female escort, Tryst San Antonio escorts, skipthe games, skip yhe games, akip the games skip the games wv
+skip the games hudson valley
+skip the games worcester
+skip the game hudson valley
+skip the games cape cod"
         />
         <link rel="icon" href="/favicon.ico" />
 
