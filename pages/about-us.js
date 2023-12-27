@@ -15,114 +15,153 @@ const AboutUs = () => {
       </Head>
       <Header />
       <div className="w-11/12 m-auto pt-10 sm:w-5/6">
-        <div>
-          <h1 className="text-xl font-bold sm:text-3xl">About Us</h1>
-          <hr />
-          <p className="mt-5">
-            Skip the games is the most extensive Backpage Alternative currently!
-            Do you want to find the most accessible backpage replacement
-            websites? You are not the only one! Skip the games will make you
-            happy like Backpages. Backpage was once the best online place to
-            post personal or classified ads. It had everything, electronics,
-            events and vacancy alerts. The land was also available.
-          </p>
-          <br />
+        <p className="text-2xl">
+          Hello, Dear friends, Welcome to Skipthegames also, we are happy you
+          want to know something more about our site
+        </p>
+        <p>
+          So, basically, nowadays people are more dependent on online products
+          and services that's why we also, take forward a step to help you.
+        </p>
+        <p>
+          Our first wish is to provide you with a better solution to solve your
+          problem. So, kindly if you don't get any solution then mention it in
+          the comment section.
+        </p>
+        <p>
+          Also, we are trying to provide fresh & latest content that provides
+          you ideas about all updated information that's happening in the world.
+        </p>
+        <p>
+          In the below section you can get more ideas about our site like our
+          website category and content category.
+        </p>
+        <p>
+          If you have additional questions or require more information about our
+          About Us Page, do not hesitate to contact us through email at{" "}
+          <b>adbacklist@gmail.com</b>
+        </p>
+        <h2>
+          <b>What is Our Goal?</b>
+        </h2>
+        <p>
+          There are millions of websites created every day, also, there is much
+          fake content spread on the internet.
+        </p>
+        <p>
+          So, Our main goal is to provide you with 100% Original and Safe
+          content that provides you a great and better experience on the world
+          wide web.
+        </p>
+        <p>
+          We mainly focus on our service so and improving it regularly to
+          provide a better user experience to all users.
+        </p>
+        <p>
+          Basically, we focus on the Free classified advertisements niche so,
+          our main priority is to search for new content and present it in front
+          of you to learn something new.{" "}
+        </p>
+        <h3>
+          <b>What is our Service?</b>
+        </h3>
+        <p>
+          We are mainly focused on the Free classified advertisements category
+          so, we provide Free classified advertisements related content if you
+          are interested in the Free classified advertisements category then you
+          can visit daily to get more latest information.
+        </p>
+        <p>
+          Find the ultimate pleasure without the hassle. Skip the games and
+          discover top-notch female escorts in CT, N.C, NJ, and more. Indulge in
+          a discreet and unforgettable experience with Escort Dude. Explore
+          Tryst San Antonio escorts for an adventure like no other. Satisfaction
+          guaranteed!
+        </p>
+        <p>
+          On our website Skipthegames you get can all Free classified
+          advertisements related information also, we focus on many other
+          categories and we hope you like also, the content of other categories
+          that are maintained on our website. So, you can visit our website
+          homepage to know all category details here you can visit our homepage
+          Click here{" "}
+        </p>
+        <p>
+          Also, we provide a Notification update service you can join by email
+          and other Social Media Platforms, and all Links you can get on the
+          Homepage visit now.
+          <a href="https://skipthegames.bio/"> Skipthegames </a>
+        </p>
+        <h3>
+          <b>About Skipthegames</b>
+        </h3>
+        <p>
+          As you can see already we mention what is our goal and Service again
+          we repeat that we mainly focus on Free classified advertisements
+          Category to help people.
+        </p>
+        <p>
+          This Website is Created By Skipthegames to help people because many
+          people are still spending hours of time to get exact information so,
+          this is the only motive to create{" "}
+          <a href>"https://skipthegames.bio/"Skipthegames</a> to help people and
+          provide them a better web experience. Also, This About Us Page is
+          Generated With <a href="https://soumyahelp.com">Soumya help</a>
+        </p>
+        <>
           <p>
-            Unfortunately, the location became a hub for adult content. The feds
-            were not thrilled. The feds weren't thrilled! The US is the best
-            place to settle your business or to make a significant investment.
-            This journey began as a backpage replacement and has now become a
-            pioneering force in the dynamic field of categorized records. We
-            strive for excellence and make every effort to improve our services.
-            The satisfaction of our clients is what keeps the US going. It also
-            helps the US achieve brilliance, excellence and success. We offer
-            free listing services and promise to deliver the best possible
-            knowledge. We are not concerned about any illegitimate ad listing
-            actions. Our goal is to make your company an absolute success by
-            providing real-life and value-driven companies that meet your needs.
-            Every approach we take contributes to customer delight. We enjoy
-            taking pleasure in innovative add-on opportunities for customers and
-            group actions that increase US trust and respect. We believe
-            innovation and transparency make the US different from other
-            countries.
+            Now, the time is to know about the Admin Details of this website,
+            so, now we have to go down to know about Admin details.
           </p>
-          <br />
-          <br />
-          <h1 className="text-xl font-bold sm:text-3xl">
-            Backpage alternative websites
-          </h1>
-          <hr />
-          <p className="mt-5">
-            Skip the games has an inclination to ease to show your business in
-            an efficient manner. Many service providers have seen substantial
-            growth in their company with the aid of free classified site. If
-            you've got been sorting out partner level option to backpage, you've
-            got discovered the finest backpage alternative and{" "}
-            <strong>craigslist personals</strong> alternative site, Skip the
-            games categorized.
-          </p>
-          <br />
-          <br />
-          <h2 className="text-xl font-bold sm:text-3xl">
-            Why should you select Skip the games?
-          </h2>
-          <hr />
-          <p className="mt-5">
-            Best location in brand awareness Getting individuals to understand
-            concerning your company might be worn the most efficient way through
-            classified advertisements on Skip the games. We have a propensity to
-            aid you to be successful in your potential customers. You will be
-            able to create leads for your organization by posting free
-            classified advertisements here. Once your profile is created you'll
-            be able to just bear your business page' and thereby simply update
-            photographs, company data, contact details, services offered, map
-            place etc.. In our <strong>Craigslist Personals</strong> alternative
-            within the world, it will be possible for you to attach with the
-            verified clients UN agency will quickly react and thereby facilitate
-            inside the rapid development of your business.
-          </p>{" "}
-          <br />
+          <h3>
+            <b>Admin's Statement for Skipthegames</b>
+          </h3>
           <p>
-            Sadly, United States close up backpage classified website within the
-            early 2019 for SESTA/FOSTA laws & allegation of sex trafficking
-            advertisements in its adult classified part. When the ending of the
-            majority of well-liked US classified website backpage.com, Skip the
-            games categorized launched to interchange backpage as a categorized
-            internet site.
-            <strong>Free classified advertisements</strong> sites are an
-            excellent thanks to take the business to succeeding level and a
-            crucial part of their digital selling strategy of the many
-            companies. Thousands of free classified advertisements are being
-            denoted on Skip the games categorized regularly as a{" "}
-            <strong>backpage personals classified site</strong>.{" "}
-          </p>{" "}
-          <br />
-          <p>
-            Whatever you're trying to find, you may realize many classified ads
-            in your city, in Skip the games advertisements. All you have got to
-            attempt to do would be to pick your location category/sub-category
-            to search out the best deals offered by Skip the games classified
-            advertisers. Skip the games supplies you with one perfect platform
-            for reaching intent on many shoppers online. We tend to assist in
-            displaying your system in a great way. Several service providers
-            have been manipulation our <strong>free classified site</strong> for
-            managing and growing their enterprise. If you are a global service
-            provider, then this is the most{" "}
-            <strong>Free Classified Sites</strong> within the world. you are at
-            the proper location. For growing your business and taking it into a
-            complete new degree, set up for sale on the
-            <strong>
-              <Link href="/" className="text-blue-400">
-                Skip the games
-              </Link>
-            </strong>
-            . This fashion you'll have the ability to connect with your target
-            market and just get business online.Collect more leads from Skip the
-            games.com is the replacement for backpage wherever you'll post free
-            classified advertisements to drive your companies or providers on
-            the internet.
+            As per my point of view, there are many people who visit the
+            internet to get some information but 90% of the time they get wrong
+            information so, the first priority of our website Skipthegames is to
+            provide 100% legit and accurate information to our users, Also, I
+            hope my dream comes true one day, and our website will provide
+            Original Content to provide a better user experience. So, From my
+            Side thanks for visiting our website.
           </p>
-        </div>
+          <h3>
+            <b>Admin's Contact Information</b>
+          </h3>
+          <p>
+            Hi, this Adbacklist, in the above paragraph you know about the
+            website properly and now I am going to provide my contact details.
+          </p>
+          <p>
+            If you have any problem & suggestions for this website then you can
+            contact me by using following contact details.
+          </p>
+        </>
+
+        <>
+          <p>
+            These details are my personal Account details if you want to contact
+            me then you can contact me by the above platform.
+          </p>
+          <p>
+            Finally, this is our complete about us page about details are
+            showing what is the motive to create Skipthegames. Also, this page
+            is generated by Soumya Help{" "}
+            <a href="https://soumyahelp.com/about-us-generator/">
+              About Us Generator
+            </a>
+          </p>
+          <p>
+            If you want to contact us then you can email us at
+            adbacklist@gmail.com also, you can contact us by our contact us
+            form. Go to homepage{" "}
+            <a href="https://skipthegames.bio/">Skipthegames</a>
+            <a href="https://soumyahelp.com/about-us-generator/">.</a>
+          </p>
+          <center>
+            <p>"Thanks for visiting our About Us Page"</p>
+          </center>
+        </>
       </div>
       <Footer></Footer>
     </>
