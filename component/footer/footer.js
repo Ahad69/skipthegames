@@ -78,55 +78,37 @@ const Footer = () => {
           </ul>
           <ul className={style.footer}>
             <li className={style.item}>
-              <Link href={"/sites-similar-to-backpage"}>
-                Sites similar to Backpage{" "}
-              </Link>
+              <Link href={"#"}>Skip the Games</Link>
             </li>
             <li className={style.item}>
-              <Link href={"/sites-like-craiglist"}>Sites like craigslist</Link>
+              <Link href={"#"}>Female Escort</Link>
             </li>
             <li className={style.item}>
-              <Link href={"/"}>Bedpage escort</Link>
+              <Link href={"#"}>Tryst San Antonio escorts</Link>
             </li>
             <li className={style.item}>
-              <Link href={"/mega-personalservice"}>Mega personalservice</Link>
+              <Link href={"#"}>Skipthe Games</Link>
             </li>
             <li className={style.item}>
-              <Link href={"/mega-personal"}>Megapasonal</Link>
+              <Link href={"#"}>Skip Yhe Games</Link>
             </li>
             <li className={style.item}>
-              <Link href={"/mega-personal-dating"}>Mega personal dating</Link>
+              <Link href={"#"}>Akip The Games</Link>
             </li>
             <li className={style.item}>
-              <Link href={"/"}>Megapersonals classified</Link>
+              <Link href={"#"}>Tescorts</Link>
             </li>
             <li className={style.item}>
-              <Link href={"/bedpage-alternatives"}>Bedpage alternatives</Link>
+              <Link href={"#"}>Skip The Games wv</Link>
             </li>
             <li className={style.item}>
-              <Link href={"/mega-personal-classified"}>
-                Mega personal classified
-              </Link>
+              <Link href={"#"}>Skip The Games Hudson Valley</Link>
             </li>
             <li className={style.item}>
-              <Link href={"/independent-escots"}>Independent escots</Link>
+              <Link href={"#"}>Skip The Games Worcester</Link>
             </li>
             <li className={style.item}>
-              <Link href={"/"}>Queens Escort</Link>
-            </li>
-            <li className={style.item}>
-              <Link href={"/skip-the-games"}>Skip the games</Link>
-            </li>
-            <li className={style.item}>
-              <Link href={"/queens-backpahe"}>Queens Backpahe</Link>
-            </li>
-            <li className={style.item}>
-              <Link href={"/similar-to-backpage"}>
-                Website similar to Backpage
-              </Link>
-            </li>
-            <li className={style.item}>
-              <Link href={"/backpage-hookup"}>Backpage hook up</Link>
+              <Link href={"#"}>Skip The Games Cape cod</Link>
             </li>
           </ul>
           <br />
