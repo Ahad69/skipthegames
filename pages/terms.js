@@ -11,9 +11,8 @@ const Terms = () => {
     <div>
       <Head>
         <title>Terms</title>
- 
-      <link rel="icon" href="/logo.png" />
-     
+
+        <link rel="icon" href="/logo.png" />
       </Head>
       <Header />
       <div className="w-11/12 m-auto pt-10 sm:w-5/6">
@@ -21,19 +20,19 @@ const Terms = () => {
         <hr />
         <br />
         <strong>
-          Updated February 21, 2023 <br />
+          Updated December 27, 2023 <br />
           <br />
           Objectives/Content:
         </strong>
         <p>
           The Site reserves the privilege to alter the Terms at any time and for
           almost any reason. Updated versions of the Conditions will undoubtedly
-          be submitted to the Site in Ad Back List.com and also you should visit this
-          page periodically to keep apprised of any changes. By continuing to
-          make use of the Site after any such change, you accept and agree on
-          the modified Terms. You agree that the website will not be responsible
-          for you personally or some other third party for practically any
-          modification or discontinuance of the website.
+          be submitted to the Site in Skip the games.com and also you should
+          visit this page periodically to keep apprised of any changes. By
+          continuing to make use of the Site after any such change, you accept
+          and agree on the modified Terms. You agree that the website will not
+          be responsible for you personally or some other third party for
+          practically any modification or discontinuance of the website.
         </p>
         <br />
         <b>Consumer Conduct:</b>
@@ -236,10 +235,10 @@ const Terms = () => {
         accurate and that you are the copyright or intellectual property owner
         or authorized to act on the copyright or intellectual property owner's
         behalf. 6. Our copyright representative can be attained as follows: 7.
-        Email: misuse@Ad Back List.com (Remember to put Copyright Infringement in the
-        subject line) The Site may, under suitable circumstances and in our
-        discretion, disable or terminate the accounts of consumers who could be
-        repeat infringers.
+        Email: misuse@Skip the games.com (Remember to put Copyright Infringement
+        in the subject line) The Site may, under suitable circumstances and in
+        our discretion, disable or terminate the accounts of consumers who could
+        be repeat infringers.
         <br />
         <br />
         <b>Privacy Policy:</b>
@@ -262,12 +261,12 @@ const Terms = () => {
         use of this Website; if you do not want to receive further
         communications by the Site (or its associates and partners), you need to
         terminate your registration by sending a cancellation note to get hold
-        of (@)Ad Back List.com. In the event you opt to get mobile alarms regarding
-        any advertisement, you consent we may send automated texting into your
-        cell telephone. If you don't want to receive such text messages, you
-        ought not accept the mobile notifications choice. We will not mail you
-        any marketing or advertisements by text messages. Message and data rates
-        can submit an application for notifications.
+        of (@)Skip the games.com. In the event you opt to get mobile alarms
+        regarding any advertisement, you consent we may send automated texting
+        into your cell telephone. If you don't want to receive such text
+        messages, you ought not accept the mobile notifications choice. We will
+        not mail you any marketing or advertisements by text messages. Message
+        and data rates can submit an application for notifications.
         <br />
         <br />
         <br /> <b>Fees:</b>
@@ -409,8 +408,8 @@ const Terms = () => {
           third-party content or third-party applications, or see another
           website linked to by this Site. The section titles in these Terms are
           for convenience only and don't have any legal or contractual effect.
-          Please report any violations of the Requirements to:
-          misuse@Ad Back List.com
+          Please report any violations of the Requirements to: misuse@Skip the
+          games.com
           <br />
           <br />
           <strong>Severance and Waiver:</strong>
@@ -427,12 +426,12 @@ const Terms = () => {
           constitute a waiver of such right or provision unless acknowledged and
           agreed to from the website."
           <br />
-          Ad Back List.com can be a web site (the “Site") that hosts categorized
-          advertisements and relevant articles created and manufactured with
-          third party users. Your use of the website, for example most of
-          access, features or services, is governed with these Conditions of Use
-          and the Privacy By using the Site in any way, you are agreeing to
-          conform to these Conditions
+          Skip the games.com can be a web site (the “Site") that hosts
+          categorized advertisements and relevant articles created and
+          manufactured with third party users. Your use of the website, for
+          example most of access, features or services, is governed with these
+          Conditions of Use and the Privacy By using the Site in any way, you
+          are agreeing to conform to these Conditions
         </p>
       </div>
       <Footer />

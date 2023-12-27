@@ -25,7 +25,7 @@ const ContactUs = () => {
           contact us anytime to get assistance and solutions. We provide the
           best assistance and responsiveness. Our customers are happy with our
           support and work in addition. We're always eager to help you. Tell us
-          about your problem and how we can assist you! Ad Back List Customer
+          about your problem and how we can assist you! Skip the games Customer
           support is offered at no cost. We are available all day, so you don't
           have to worry about response times. Contact us anytime, and you will
           receive the best service. Live support agents are available 24/7 to
@@ -45,12 +45,12 @@ const ContactUs = () => {
         <br />
         <br />
         <h1 className="text-xl font-bold sm:text-3xl text-white">
-          Contact Best Website similar to Backpage [Ad Back List]{" "}
+          Contact Best Website similar to Backpage [Skip the games]{" "}
         </h1>
         <hr />
         <br />
         <p>
-          Ad Back List is the most popular{" "}
+          Skip the games is the most popular{" "}
           <Link href="/" target="_self" className="text-blue-400">
             backpage replacement
           </Link>{" "}
@@ -59,7 +59,7 @@ const ContactUs = () => {
             similar to Backpage
           </Link>
           . Are you looking for the most straightforward alternative sites to
-          Backpage? It's not all alone! Ad Back List will ensure that you are
+          Backpage? It's not all alone! Skip the games will ensure that you are
           satisfied with Backpages. The site was once the best online site for
           personal or commercial ads; Backpage was a one-stop shop for
           everything from electronics to events, alerts for vacant land, and
@@ -75,7 +75,7 @@ const ContactUs = () => {
         </p>
         <br />
         <h2 className="text-xl font-bold sm:text-3xl text-white">
-          Similar to Backpage Websites [Ad Back List]
+          Similar to Backpage Websites [Skip the games]
         </h2>
         <hr />
         <br />
