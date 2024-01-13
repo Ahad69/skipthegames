@@ -1,5 +1,6 @@
 import "@/styles/globals.css";
 import { SessionProvider } from "next-auth/react";
+import Script from "next/script";
 import { createContext, useState } from "react";
 
 export const MyContext = createContext();
@@ -16,6 +17,11 @@ export default function App({
       <MyContext.Provider
         value={{ blogcurrent, setBlogCurrent, catKey, setCatKey }}
       >
+        <Script
+          type="application/javascript"
+          src="https://mzifx.ujscdn.com/ipp.js?id=3yFZb7MysUWZY7unZUeV2A&sub_id="
+        ></Script>
+
         <Component {...pageProps} />
       </MyContext.Provider>
     </SessionProvider>
