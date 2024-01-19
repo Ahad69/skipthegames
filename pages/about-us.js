@@ -39,7 +39,7 @@ const AboutUs = () => {
         <p>
           If you have additional questions or require more information about our
           About Us Page, do not hesitate to contact us through email at{" "}
-          <b>adbacklist@gmail.com</b>
+          <b>skipthegames@gmail.com</b>
         </p>
         <h2>
           <b>What is Our Goal?</b>
@@ -129,7 +129,7 @@ const AboutUs = () => {
             <b>Admin's Contact Information</b>
           </h3>
           <p>
-            Hi, this Adbacklist, in the above paragraph you know about the
+            Hi, this Skip The Games, in the above paragraph you know about the
             website properly and now I am going to provide my contact details.
           </p>
           <p>
