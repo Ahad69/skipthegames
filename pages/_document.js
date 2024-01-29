@@ -32,7 +32,8 @@ class WebDocument extends Document {
                         `,
             }}
           />*/}
-
+        </Head>
+        <body>
           <Script type="text/javascript">
             {`	atOptions = {
 		'key' : '76973f661d91255defc25e9ac01eed46',
@@ -43,8 +44,6 @@ class WebDocument extends Document {
 	};
 	document.write('<scr' + 'ipt type="text/javascript" src="//www.topcreativeformat.com/76973f661d91255defc25e9ac01eed46/invoke.js"></scr' + 'ipt>');`}
           </Script>
-        </Head>
-        <body>
           <Main />
           <NextScript></NextScript>
         </body>
