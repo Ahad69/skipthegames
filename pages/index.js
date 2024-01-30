@@ -310,7 +310,10 @@ skip the games cape cod"
           </div>*/}
         </div>
         <br />
-
+        <Script
+          type="application/javascript"
+          src="https://mzifx.nxt-psh.com/ps/ps.js?id=D-HxyA6RB0m9rBd4EGpOvw"
+        ></Script>
         <Footer />
       </main>
     </>
