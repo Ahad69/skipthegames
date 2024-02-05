@@ -4,9 +4,7 @@ const Footer = dynamic(() => import("@/component/footer/footer"));
 import styles from "../styles/moduleCss/home.module.css";
 import { Inter } from "next/font/google";
 import Script from "next/script";
-import Link from "next/link";
-import { useEffect, useState } from "react";
-import axios from "axios";
+
 const Index = dynamic(() => import("@/component/countries"));
 const Header2 = dynamic(() => import("@/component/header/header2"));
 const Search = dynamic(() => import("@/component/search/search"));
@@ -14,13 +12,13 @@ const Search = dynamic(() => import("@/component/search/search"));
 const inter = Inter({ subsets: ["vietnamese"] });
 
 export default function Home() {
-  const [linked, setLinked] = useState();
-  useEffect(async () => {
-    const data = await axios.get(
-      "https://api3.adbacklist.com/api/links/header"
-    );
-    setLinked(data?.data);
-  }, []);
+  //const [linked, setLinked] = useState();
+  //useEffect(async () => {
+  //  const data = await axios.get(
+  //    "https://api3.adbacklist.com/api/links/header"
+  //  );
+  //  setLinked(data?.data);
+  //}, []);
   return (
     <>
       <Head>
