@@ -59,7 +59,7 @@ skip the games cape cod"
       </Head>
 
       <main className={styles.main}>
-        <Header2 linked={linked} />
+        <Header2 />
         <div className="flex flex-col">
           <div className={styles.container}>
             <Search />
