@@ -7,7 +7,7 @@ import styles from "../../styles/moduleCss/home.module.css";
 import { useRouter } from "next/router";
 import { useSession, signOut } from "next-auth/react";
 
-const Header2 = () => {
+const Header2 = ({ linked }) => {
   const router = useRouter();
   const [user, setUser] = useState();
   const { data: session } = useSession();
@@ -24,14 +24,6 @@ const Header2 = () => {
     signOut();
     router.push("/login");
   };
-
-  //  useEffect(async () => {
-  //    const data = await axios.get(
-  //      "https://api3.adbacklist.com/api/links/header"
-  //    );
-  //    setUser(data?.data);
-  //  }, []);
-  //
 
   return (
     <div>
@@ -115,7 +107,7 @@ const Header2 = () => {
             <Link
               className="sm:hidden block ml-auto w-[130px] text-blue-600 font-bold text-center h-[20px]"
               target="_blank"
-              href={"https://adbacklist.com/"}
+              href={linked ?? "/"}
             >
               Meet & Fuck
             </Link>{" "}
@@ -139,7 +131,7 @@ const Header2 = () => {
                   <Link
                     className="text-blue-600"
                     target="_blank"
-                    href={"https://adbacklist.com/"}
+                    href={linked ?? "/"}
                   >
                     Meet & Fuck
                   </Link>
@@ -157,7 +149,7 @@ const Header2 = () => {
                   <Link
                     className="text-blue-600"
                     target="_blank"
-                    href={"https://adbacklist.com/"}
+                    href={linked ?? "/"}
                   >
                     Meet & Fuck
                   </Link>
