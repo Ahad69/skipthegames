@@ -1,12 +1,11 @@
 import Link from "next/link";
 import React from "react";
-import Cookies from "js-cookie";
+
 import { useEffect, useState } from "react";
-import jwt_decode from "jwt-decode";
+
 import styles from "../../styles/moduleCss/home.module.css";
 import { useRouter } from "next/router";
 import { useSession, signOut } from "next-auth/react";
-import axios from "axios";
 
 const Header2 = () => {
   const router = useRouter();
@@ -25,12 +24,14 @@ const Header2 = () => {
     signOut();
     router.push("/login");
   };
-  useEffect(async () => {
-    const data = await axios.get(
-      "https://api3.adbacklist.com/api/links/header"
-    );
-    setUser(data?.data);
-  }, []);
+
+  //  useEffect(async () => {
+  //    const data = await axios.get(
+  //      "https://api3.adbacklist.com/api/links/header"
+  //    );
+  //    setUser(data?.data);
+  //  }, []);
+  //
 
   return (
     <div>
@@ -114,7 +115,7 @@ const Header2 = () => {
             <Link
               className="sm:hidden block ml-auto w-[130px] text-blue-600 font-bold text-center h-[20px]"
               target="_blank"
-              href={user ?? "/"}
+              href={"https://adbacklist.com/"}
             >
               Meet & Fuck
             </Link>{" "}
@@ -138,7 +139,7 @@ const Header2 = () => {
                   <Link
                     className="text-blue-600"
                     target="_blank"
-                    href={user ?? "/"}
+                    href={"https://adbacklist.com/"}
                   >
                     Meet & Fuck
                   </Link>
@@ -156,7 +157,7 @@ const Header2 = () => {
                   <Link
                     className="text-blue-600"
                     target="_blank"
-                    href={user ?? "/"}
+                    href={"https://adbacklist.com/"}
                   >
                     Meet & Fuck
                   </Link>
