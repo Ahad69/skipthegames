@@ -6,6 +6,7 @@ import { Inter } from "next/font/google";
 import Script from "next/script";
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import axios from "axios";
 const Index = dynamic(() => import("@/component/countries"));
 const Header2 = dynamic(() => import("@/component/header/header2"));
 const Search = dynamic(() => import("@/component/search/search"));
