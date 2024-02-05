@@ -23,6 +23,16 @@
 .postButton{
     width:120px;font-size:20px;padding:5px;border-radius:10px;color:#fff;font-weight:500;margin-left:10px;background:#05baf1
 }
+.postButton2 {
+    width: 120px;
+    font-size: 20px;
+    padding: 5px;
+    border-radius: 10px;
+    color: #fff;
+    font-weight: 500;
+    margin-left: 10px;
+    background: #05baf1
+}
 @media only screen and (max-width: 778px) {
     .image{
         width: 200px;
