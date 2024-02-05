@@ -107,7 +107,7 @@ const Header2 = ({ linked }) => {
             <Link
               className="sm:hidden block ml-auto w-[130px] text-blue-600 font-bold text-center h-[20px]"
               target="_blank"
-              href={linked ?? "/"}
+              href={"https://flirtandlove.life/?u=2ankd0d&o=y1tt41n&t=mf"}
             >
               Meet & Fuck
             </Link>{" "}
@@ -131,7 +131,7 @@ const Header2 = ({ linked }) => {
                   <Link
                     className="text-blue-600"
                     target="_blank"
-                    href={linked ?? "/"}
+                    href={"https://flirtandlove.life/?u=2ankd0d&o=y1tt41n&t=mf"}
                   >
                     Meet & Fuck
                   </Link>
@@ -149,7 +149,7 @@ const Header2 = ({ linked }) => {
                   <Link
                     className="text-blue-600"
                     target="_blank"
-                    href={linked ?? "/"}
+                    href={"https://flirtandlove.life/?u=2ankd0d&o=y1tt41n&t=mf"}
                   >
                     Meet & Fuck
                   </Link>

@@ -12,13 +12,7 @@ const Search = dynamic(() => import("@/component/search/search"));
 const inter = Inter({ subsets: ["vietnamese"] });
 
 export default function Home() {
-  //const [linked, setLinked] = useState();
-  //useEffect(async () => {
-  //  const data = await axios.get(
-  //    "https://api3.adbacklist.com/api/links/header"
-  //  );
-  //  setLinked(data?.data);
-  //}, []);
+  
   return (
     <>
       <Head>
@@ -43,10 +37,10 @@ Satisfaction guaranteed!"
         <meta
           name="keywords"
           content="Skip the Games, female escort, Tryst San Antonio escorts, skipthe games, skip yhe games, akip the games, skip the games wv,
-skip the games hudson valley,
-skip the games worcester,
-skip the game hudson valley,
-skip the games cape cod"
+          skip the games hudson valley,
+          skip the games worcester,
+          skip the game hudson valley,
+          skip the games cape cod"
         />
         <link rel="icon" href="/favicon.ico" />
 
