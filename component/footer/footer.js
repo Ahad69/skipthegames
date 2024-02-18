@@ -78,37 +78,45 @@ const Footer = () => {
           </ul>
           <ul className={style.footer}>
             <li className={style.item}>
-              <Link href={"#"}>Skip the Games</Link>
+              <Link href={"/skip-the-games"}>Skip the Games</Link>
             </li>
             <li className={style.item}>
-              <Link href={"#"}>Female Escort</Link>
+              <Link href={"/female-escort"}>Female Escort</Link>
             </li>
             <li className={style.item}>
-              <Link href={"#"}>Tryst San Antonio escorts</Link>
+              <Link href={"/tryst-san-antonio-escorts"}>
+                Tryst San Antonio escorts
+              </Link>
             </li>
             <li className={style.item}>
-              <Link href={"#"}>Skipthe Games</Link>
+              <Link href={"/skipthe-games"}>Skipthe Games</Link>
             </li>
             <li className={style.item}>
-              <Link href={"#"}>Skip Yhe Games</Link>
+              <Link href={"/skip-yhe-games"}>Skip Yhe Games</Link>
             </li>
             <li className={style.item}>
               <Link href={"#"}>Akip The Games</Link>
             </li>
             <li className={style.item}>
-              <Link href={"#"}>Tescorts</Link>
+              <Link href={"/tescorts"}>Tescorts</Link>
             </li>
             <li className={style.item}>
-              <Link href={"#"}>Skip The Games wv</Link>
+              <Link href={"/skip-the-games-wv"}>Skip The Games wv</Link>
             </li>
             <li className={style.item}>
-              <Link href={"#"}>Skip The Games Hudson Valley</Link>
+              <Link href={"/skip-the-games-hudson-valley"}>
+                Skip The Games Hudson Valley
+              </Link>
             </li>
             <li className={style.item}>
-              <Link href={"#"}>Skip The Games Worcester</Link>
+              <Link href={"/skip-the-games-worcester"}>
+                Skip The Games Worcester
+              </Link>
             </li>
             <li className={style.item}>
-              <Link href={"#"}>Skip The Games Cape cod</Link>
+              <Link href={"/skip-the-games-cape-cod"}>
+                Skip The Games Cape cod
+              </Link>
             </li>
           </ul>
           <br />

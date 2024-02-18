@@ -4,7 +4,7 @@ const Footer = dynamic(() => import("@/component/footer/footer"));
 import styles from "../styles/moduleCss/home.module.css";
 import { Inter } from "next/font/google";
 import Script from "next/script";
-import Link from "next/link";
+
 const Index = dynamic(() => import("@/component/countries"));
 const Header2 = dynamic(() => import("@/component/header/header2"));
 const Search = dynamic(() => import("@/component/search/search"));
@@ -12,6 +12,7 @@ const Search = dynamic(() => import("@/component/search/search"));
 const inter = Inter({ subsets: ["vietnamese"] });
 
 export default function Home() {
+  
   return (
     <>
       <Head>
@@ -36,10 +37,10 @@ Satisfaction guaranteed!"
         <meta
           name="keywords"
           content="Skip the Games, female escort, Tryst San Antonio escorts, skipthe games, skip yhe games, akip the games, skip the games wv,
-skip the games hudson valley,
-skip the games worcester,
-skip the game hudson valley,
-skip the games cape cod"
+          skip the games hudson valley,
+          skip the games worcester,
+          skip the game hudson valley,
+          skip the games cape cod"
         />
         <link rel="icon" href="/favicon.ico" />
 

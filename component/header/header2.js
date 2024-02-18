@@ -1,15 +1,15 @@
 import Link from "next/link";
 import React from "react";
-import Cookies from "js-cookie";
+
 import { useEffect, useState } from "react";
-import jwt_decode from "jwt-decode";
+
 import styles from "../../styles/moduleCss/home.module.css";
 import { useRouter } from "next/router";
 import { useSession, signOut } from "next-auth/react";
 
-const Header2 = () => {
+const Header2 = ({ linked }) => {
   const router = useRouter();
-  // const [user, setUser] = useState();
+  const [user, setUser] = useState();
   const { data: session } = useSession();
 
   // const usersStringfy = Cookies.get("token");
@@ -62,7 +62,12 @@ const Header2 = () => {
                     </li>
                   )}
                   <li>
-                    <Link href="/blogs">Blogs</Link>
+                    <Link target="_blank" href={"/user/post"}>
+                      <button className={styles.postButton2}>
+                        {" "}
+                        + Post Ad{" "}
+                      </button>
+                    </Link>
                   </li>
                   <li
                     onClick={() => logout()}
@@ -76,7 +81,12 @@ const Header2 = () => {
               ) : (
                 <>
                   <li className="">
-                    <Link href="/blogs">Blogs</Link>
+                    <Link target="_blank" href={"/user/post"}>
+                      <button className={styles.postButton2}>
+                        {" "}
+                        + Post Ad{" "}
+                      </button>
+                    </Link>
                   </li>
                   <li>
                     <Link href="/login">Login/SignUp</Link>
@@ -89,9 +99,21 @@ const Header2 = () => {
             {" "}
             <Link href="/">SKIPTHEGAMES</Link>{" "}
           </h1>
-          <Link href={"/user/post"}>
+          <Link className="hidden sm:block" href={"/user/post"}>
             <button className={styles.postButton}> + Post Ad </button>
           </Link>
+          <button>
+            {" "}
+            <Link
+              className="sm:hidden block ml-auto w-[130px] text-blue-600 font-bold text-center h-[20px]"
+              target="_blank"
+              href={
+                "https://afflat3e1.com/trk/lnk/A0D036C0-8FCB-4C42-8320-D5CC21C8984E/?o=16837&c=918277&a=688040&k=4BC74FE55981762CB9D625CA6FC57983&l=18032"
+              }
+            >
+              Meet & Fuck
+            </Link>{" "}
+          </button>
         </div>
 
         <div className="navbar-end">
@@ -108,7 +130,15 @@ const Header2 = () => {
                   </li>
                 )}
                 <li className="mr-2">
-                  <Link href="/blogs">Blogs</Link>
+                  <Link
+                    className="text-blue-600"
+                    target="_blank"
+                    href={
+                      "https://afflat3e1.com/trk/lnk/A0D036C0-8FCB-4C42-8320-D5CC21C8984E/?o=16837&c=918277&a=688040&k=4BC74FE55981762CB9D625CA6FC57983&l=18032"
+                    }
+                  >
+                    Meet & Fuck
+                  </Link>
                 </li>
                 <li
                   className="bg-red-600 p-2 text-white font-bold"
@@ -120,7 +150,15 @@ const Header2 = () => {
             ) : (
               <>
                 <li>
-                  <Link href="/blogs">Blogs</Link>
+                  <Link
+                    className="text-blue-600"
+                    target="_blank"
+                    href={
+                      "https://afflat3e1.com/trk/lnk/A0D036C0-8FCB-4C42-8320-D5CC21C8984E/?o=16837&c=918277&a=688040&k=4BC74FE55981762CB9D625CA6FC57983&l=18032"
+                    }
+                  >
+                    Meet & Fuck
+                  </Link>
                 </li>
                 <li>
                   <Link href="/login">Login/SignUp</Link>

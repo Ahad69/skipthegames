@@ -11,7 +11,7 @@ function generateSiteMap(posts) {
          .map((id) => {
            return `
        <url>
-           <loc>${`https://adbacklist.com/post/details/${id?.category}/${id?._id}`}</loc>
+           <loc>${`https://skipthegames.bio/post/details/${id?.category}/${id?._id}`}</loc>
        </url>
        `;
          })
