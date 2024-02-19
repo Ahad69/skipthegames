@@ -22,7 +22,7 @@ const PostList = () => {
   const [loading, setLoading] = useState(true);
   const [gallery, setGallery] = useState([]);
   const [age, setAge] = useState("");
-  const [category, setCategory] = useState("Adult Jobs");
+  const [category, setCategory] = useState("");
   const [reload, setReload] = useState(false);
 
   async function getPosts() {
@@ -30,6 +30,7 @@ const PostList = () => {
       const response = await axios.get(
         `https://skipthegames-backend.vercel.app/api/products/all?page=${current}&category=${category}&state=${router?.query?.post}`
       );
+
       setPage(response.data.pages);
       setGallery(response.data.data.products);
       const premiumPost = response.data.data.products?.filter(
@@ -43,6 +44,11 @@ const PostList = () => {
       setLoading(false);
     } catch (error) {
       console.error(error);
+      setLoading(false);
+      setPage(0);
+      setGallery([]);
+      setPremiumCityPost([]);
+      setFreeCityPost([]);
     }
   }
 
