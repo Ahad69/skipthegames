@@ -19,7 +19,7 @@ const initialState = {
   phone: "",
   email: "",
   description: "",
-  category: "",
+  category: "Adult",
   subCategory: "",
   imgOne: "",
   imgTwo: "",
