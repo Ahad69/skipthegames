@@ -2,7 +2,7 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import React from "react";
 
-const OnlyTextList = ({ data1, data2 }) => {
+const OnlyTextList = ({ data1, data2, category }) => {
   const router = useRouter();
   return (
     <div>
@@ -18,7 +18,7 @@ const OnlyTextList = ({ data1, data2 }) => {
                   <Link
                     target="_blank"
                     rel="noopener noreferrer"
-                    href={`/post/details/${router?.query?.names?.[1]}/${b._id}?city=${router.query.names?.[0]}&sub=${router.query.names?.[2]}`}
+                    href={`/post/details/${b._id}?city=${router.query.post}&sub=${category}`}
                     key={b._id}
                     className="text-xl m-3 block text-blue-600 hover:underline cursor-pointer"
                   >
@@ -35,15 +35,15 @@ const OnlyTextList = ({ data1, data2 }) => {
       </h1>
       {data2.map((a, index) => (
         <div key={index}>
-          <li className="list-square bg-gradient-to-r from-gray-300 to-gray-100 sm:w-4/12 w-6/12 px-1 text-sm text-black font-bold  py-1 mt-5">
+          {/*<li className="list-square bg-gradient-to-r from-gray-300 to-gray-100 sm:w-4/12 w-6/12 px-1 text-sm text-black font-bold  py-1 mt-5">
             {a.date}
-          </li>
+          </li>*/}
           <ul>
             {a.objects.map((b) => (
               <Link
                 target="_blank"
                 rel="noopener noreferrer"
-                href={`/post/details/${router?.query?.names?.[1]}/${b._id}?city=${router.query.names?.[0]}&sub=${router.query.names?.[2]}`}
+                href={`/post/details/${b._id}?city=${router.query.post}&sub=${category}`}
                 key={b._id}
                 className="text-xl mt-6 mx-3 block text-blue-600 hover:underline cursor-pointer"
               >

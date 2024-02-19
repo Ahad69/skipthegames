@@ -7,7 +7,7 @@ const Footer = dynamic(() => import("@/component/footer/footer2"));
 const Header = dynamic(() => import("@/component/header/header"));
 import style from "../styles/moduleCss/blog.module.css";
 import { Input, Pagination } from "antd";
-import category from "../public/category2.json";
+import category from "../public/category.json";
 import { MyContext } from "./_app";
 import Script from "next/script";
 
@@ -25,7 +25,7 @@ const Blogs = () => {
   async function getBlogs() {
     try {
       const response = await axios.get(
-        `https://api3.adbacklist.com/api/blogs?page=${blogcurrent}&q=${keyword}&cat=${catKey}`
+        `http://localhost:5000/api/blogs?page=${blogcurrent}&q=${keyword}&cat=${catKey}`
       );
       const data = response.data;
 

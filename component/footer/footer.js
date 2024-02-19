@@ -63,6 +63,15 @@ const Footer = () => {
             </li>
             <li className={style.item}>
               <Link
+                href="/blogs"
+                className="link text-uppercase"
+                title="Contact"
+              >
+                Blogs
+              </Link>
+            </li>
+            <li className={style.item}>
+              <Link
                 href="/privacy-policy"
                 className="link text-uppercase"
                 title="Privacy"
@@ -183,7 +192,7 @@ const Footer = () => {
           </ul>
         </div>
       </footer>
-      <p className="text-center mt-8">Copyright © 2009 - 2023 </p>
+      <p className="text-center mt-8">Copyright © 2009 - 2024 </p>
     </div>
   );
 };

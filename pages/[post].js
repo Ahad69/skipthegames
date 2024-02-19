@@ -12,7 +12,7 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import React, { useEffect, useState } from "react";
 
-const Ahad = () => {
+const PostList = () => {
   const router = useRouter();
   const [layout, setLayout] = useState("list");
   const [freeCityPost, setFreeCityPost] = useState([]);
@@ -22,16 +22,16 @@ const Ahad = () => {
   const [loading, setLoading] = useState(true);
   const [gallery, setGallery] = useState([]);
   const [age, setAge] = useState("");
+  const [category, setCategory] = useState("Adult Jobs");
   const [reload, setReload] = useState(false);
 
   async function getPosts() {
     try {
       const response = await axios.get(
-        `http://localhost:5000/api/products/all?page=${current}&category=${router?.query?.names?.[2]}&state=${router?.query?.names?.[0]}&cat=${router?.query?.names?.[1]}`
+        `http://localhost:5000/api/products/all?page=${current}&category=${category}&state=${router?.query?.post}`
       );
       setPage(response.data.pages);
       setGallery(response.data.data.products);
-
       const premiumPost = response.data.data.products?.filter(
         (a) => a.isPremium == true
       );
@@ -67,12 +67,12 @@ const Ahad = () => {
 
   useEffect(() => {
     setLoading(true);
-    if (!router?.query?.names?.[0]) {
+    if (!router?.query?.post) {
       return;
     } else {
       getPosts();
     }
-  }, [router?.query?.names?.[0], current, reload]);
+  }, [router?.query?.post, current, reload, category]);
 
   const onChange = (pageNumber) => {
     setCurrent(pageNumber);
@@ -80,13 +80,21 @@ const Ahad = () => {
 
   let content;
   if (layout == "list") {
-    content = <List data1={groupedData} data2={groupedData2} />;
+    content = (
+      <List data1={groupedData} data2={groupedData2} category={category} />
+    );
   }
   if (layout == "text") {
-    content = <OnlyTextList data1={groupedData} data2={groupedData2} />;
+    content = (
+      <OnlyTextList
+        data1={groupedData}
+        data2={groupedData2}
+        category={category}
+      />
+    );
   }
   if (layout == "gallery") {
-    content = <Gallery data1={gallery} />;
+    content = <Gallery data1={gallery} category={category} />;
   }
 
   const setAdult = (e) => {
@@ -100,6 +108,11 @@ const Ahad = () => {
   }, [reload]);
 
   const meta = findMeta(router?.query?.names);
+
+  const catChange = (e) => {
+    console.log(e);
+    setCategory(e);
+  };
 
   return (
     <div className="bg-gray-200">
@@ -148,7 +161,7 @@ const Ahad = () => {
         </div>
       ) : (
         <div className="sm:w-9/12 m-auto my-5 bg-white p-3 rounded text-black">
-          {router?.query?.names?.[1] == "Adult" && age == undefined ? (
+          {age == undefined ? (
             <div className="">
               <h1 className="text-3xl font-bold">Disclaimer</h1>
               <p className="text-xl">
@@ -176,26 +189,51 @@ const Ahad = () => {
             </div>
           ) : (
             <>
-              <ul className="flex gap-2">
-                <li className="hover:text-blue-600">
-                  <Link href={`/`}>Home</Link>
-                </li>
-                &#62;
-                <li className="hover:text-blue-600">
-                  <Link href={`/${router?.query?.names?.[0]}`}>
-                    {router?.query?.names?.[0]}
-                  </Link>
-                </li>
-                &#62;
-                <li className="hover:text-blue-600">
-                  <Link href={`/${router?.query?.names?.[0]}`}>
-                    {router?.query?.names?.[1]}
-                  </Link>
-                </li>
-                &#62;
-                <li className="hover:text-blue-600 font-bold">
-                  {router?.query?.names?.[2]} ({page} results)
-                </li>
+              <ul className="flex gap-2 justify-between">
+                <div className="flex gap-2">
+                  <li className="hover:text-blue-600">
+                    <Link href={`/`}>Home</Link>
+                  </li>
+                  &#62;
+                  <li className="hover:text-blue-600">
+                    <Link href={`/${router?.query?.post}`}>
+                      {router?.query?.post}
+                    </Link>
+                  </li>
+                  &#62;
+                  <li className="hover:text-blue-600 font-bold">
+                    {category ?? "Adult"}
+                  </li>
+                  &#62;
+                  <li className="hover:text-blue-600 font-bold">
+                    {router?.query?.names?.[2]} ({page} results)
+                  </li>
+                </div>
+                <div>
+                  <select onChange={(e) => catChange(e.target.value)}>
+                    {category ? (
+                      <option>{category}</option>
+                    ) : (
+                      <option>-- Select Category --</option>
+                    )}
+                    <option value="Adult Jobs">Adult Jobs</option>
+                    <option value={"Bodyrubs"}>Bodyrubs</option>
+                    <option value={"Dom-Fetish"}>Dom-Fetish</option>
+                    <option value={"Female Escorts"}>Female Escorts</option>
+                    <option value={"Male Escorts"}>Male Escorts</option>
+                    <option value={"Strip Clubs"}>Strip Clubs</option>
+                    <option value={"Sugar Babies"}>Sugar Babies</option>
+                    <option value={"Women-Men"}>Women to Men</option>
+                    <option value={"Men-Men"}>Men to Men</option>
+                    <option value={"Men-Women"}>Men to Women</option>
+                    <option value={"Transgender"}>
+                      {" "}
+                      <option value={"Transgender"}>Dom</option>
+                    </option>
+                    <option value={"Women-Women"}>Women to Women</option>
+                    <option value={"Hookup Tonight"}>Hookup Tonight</option>
+                  </select>
+                </div>
               </ul>
               {content}
               <div className="mt-10 m-auto">
@@ -217,4 +255,4 @@ const Ahad = () => {
   );
 };
 
-export default Ahad;
+export default PostList;

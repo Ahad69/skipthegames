@@ -173,7 +173,7 @@ const PostForm = () => {
     formData.append("images", selectedFiles[2]);
     formData.append("images", selectedFiles[3]);
 
-    await fetch("https://api3.adbacklist.com/api/files2/files", {
+    await fetch("http://localhost:5000/api/files2/files", {
       method: "POST",
       body: formData,
     })
@@ -231,7 +231,7 @@ const PostForm = () => {
     }
 
     data.posterId = session?.user?.id;
-    await fetch("https://api3.adbacklist.com/api/products", {
+    await fetch("http://localhost:5000/api/products", {
       method: "POST",
       headers: {
         "content-type": "application/json",
@@ -243,7 +243,7 @@ const PostForm = () => {
         localStorage.removeItem("cities");
         const newCredit = users?.credit - local?.toFixed(2);
         axios
-          .patch(`https://api3.adbacklist.com/api/users/${session?.user?.id}`, {
+          .patch(`http://localhost:5000/api/users/${session?.user?.id}`, {
             credit: newCredit,
           })
           .then((response) => {
@@ -396,32 +396,13 @@ const PostForm = () => {
             name="category"
             id="category"
             onChange={(e) =>
-              handleInput({ type: "category", payload: e.target.value })
+              handleInput({ type: "subCategory", payload: e.target.value })
             }
             className="input bg-gray-200 w-full"
           >
             <option value="category">-- Select Category --</option>
 
             {categories?.map((e) => (
-              <option value={e?.name}>{e?.name}</option>
-            ))}
-          </select>
-        </label>
-
-        <label className="text-black font-bold text-xs sm:text-xl sm:w-6/12">
-          <span className="text-red-600">*</span> Sub Category :
-          <br />
-          <select
-            name="category"
-            id="category"
-            onChange={(e) =>
-              handleInput({ type: "subCategory", payload: e.target.value })
-            }
-            className="input bg-gray-200  w-full "
-          >
-            <option value="category">-- Select Sub Category --</option>
-
-            {subCategories?.children?.map((e) => (
               <option value={e?.name}>{e?.name}</option>
             ))}
           </select>

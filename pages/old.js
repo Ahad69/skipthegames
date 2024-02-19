@@ -17,12 +17,9 @@ const Name = () => {
 
   async function getUser() {
     try {
-      const response = await axios.get(
-        `https://api3.adbacklist.com/api/links`,
-        {
-          method: "GET",
-        }
-      );
+      const response = await axios.get(`http://localhost:5000/api/links`, {
+        method: "GET",
+      });
       const data = response.data.links[0];
 
       setLinks(data);
@@ -228,10 +225,10 @@ Explore SKIPTHEGAMES.com now!`
         </div>
       )}
       {content}
-      <Script
+      {/*<Script
         type="application/javascript"
         src="https://bizhf.nxt-psh.com/ps/ps.js?id=49c_Gv6kp02qi7om3OJrlw"
-      ></Script>
+      ></Script>*/}
       <Footer></Footer>
     </div>
   );

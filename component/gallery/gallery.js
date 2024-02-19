@@ -2,7 +2,7 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import React from "react";
 
-const Gallery = ({ data1 }) => {
+const Gallery = ({ data1, category }) => {
   const router = useRouter();
   return (
     <div>
@@ -12,7 +12,7 @@ const Gallery = ({ data1 }) => {
             <Link
               target="_blank"
               rel="noopener noreferrer"
-              href={`/post/details/${router?.query?.names?.[1]}/${a._id}?city=${router.query.names?.[0]}&sub=${router.query.names?.[2]}`}
+              href={`/post/details/${a._id}?city=${router.query.post}&sub=${category}`}
             >
               <img className="h-[300px] flex-1 object-cover" src={a.imgOne} />
             </Link>

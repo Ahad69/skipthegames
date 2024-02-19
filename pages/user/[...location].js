@@ -7,7 +7,7 @@ const Header = dynamic(() => import("@/component/header/header"));
 import style from "../../styles/moduleCss/location.module.css";
 import { BsArrowRight } from "react-icons/bs";
 import Head from "next/head";
-import cities from "../../public/country.json";
+import cities from "../../public/usa.json";
 
 const Location = () => {
   const router = useRouter();
@@ -145,103 +145,95 @@ const Location = () => {
       )}
       <div className="m-5 sm:mx-24">
         <p className="text-2xl text-red-600">Choose locations : </p>
-        {cities?.map((a) => (
-          <div className="collapse collapse-arrow" key={a._id}>
-            <input type="checkbox" className="peer" />
-            <div className="collapse-title bg-gray-300 text-black border peer-checked:bg-gray-300 peer-checked:text-black">
-              {a.name}
-            </div>
-            <div className="collapse-content bg-gray-300 text-primary-content peer-checked:bg-gray-300 peer-checked:text-black">
-              {router?.query?.location?.[0] == "multiple-city-ads" ? (
-                <>
-                  <br />
-                  <label className="font-bold text-lg bg-gray-300">
-                    <input
-                      type="checkbox"
-                      className="bg-red-100"
-                      value={[a._id]}
-                      onClick={seleceCountry}
-                    ></input>{" "}
-                    Select all States
-                  </label>
-                  <br />
-                  <br />
 
-                  {a?.children?.map((c) => (
-                    <div className="collapse collapse-arrow" key={c._id}>
-                      <input type="checkbox" className="peer" />
-                      <div className="collapse-title bg-gray-200 text-black border border-gray-300 peer-checked:bg-gray-200 peer-checked:text-black">
-                        {c?.name}
-                      </div>
-                      <div className="collapse-content bg-gray-200 text-primary-content peer-checked:bg-white peer-checked:text-black">
-                        <div>
-                          <label className="font-bold text-lg">
+        {router?.query?.location?.[0] == "multiple-city-ads" ? (
+          <>
+            {" "}
+            <label className="font-bold text-lg">
+              <input
+                type="checkbox"
+                className=" checkbox-xs border-gray-800 checked:border-gray-800  [--chkfg:white] mr-1"
+                value={["63d4d4c23f5c38ce5f287cd1"]}
+                onClick={seleceCountry}
+              ></input>{" "}
+              Select All
+            </label>
+            <br />
+            <br />
+            {cities?.[0]?.children?.map((c) => (
+              <div className="collapse collapse-arrow" key={c._id}>
+                <input type="checkbox" className="peer" />
+                <div className="collapse-title bg-gray-200 rounded-lg text-gray-800   peer-checked:bg-gray-200 peer-checked:text-gray-800">
+                  {c?.name}
+                </div>
+                <div className="collapse-content  rounded-2xl my-1 border-gray-800 bg-white text-primary-content peer-checked:bg-white peer-checked:text-black">
+                  <div>
+                    <label className="font-bold text-lg">
+                      <input
+                        type="checkbox"
+                        className=" checkbox-sm checkbox-secondary mr-1"
+                        //className="checkbox checkbox-xs border-gray-400 checked:border-gray-400  mr-1"
+                        disabled={isCountrySelected?.children?.find((a) =>
+                          a.name == c.name ? true : false
+                        )}
+                        checked={isCountrySelected?.children?.find((a) =>
+                          a.name == c.name ? true : false
+                        )}
+                        value={[cities?.[0]._id, c?._id]}
+                        onClick={selectAll}
+                      ></input>
+                      Select all
+                    </label>
+                    <br></br>
+                    {/*<hr className="my-1" />*/}
+
+                    <div className="grid sm:grid-cols-4 grid-cols-2 gap-3">
+                      {c?.children?.map((d) => (
+                        <>
+                          <label key={d._id}>
                             <input
                               type="checkbox"
-                              className="bg-red-100 ahad"
-                              disabled={isCountrySelected?.children?.find((a) =>
-                                a.name == c.name ? true : false
+                              className=" border-gray-400 checked:border-gray-400 mr-1"
+                              checked={state.find((a) =>
+                                a.name == d.name ? true : false
                               )}
-                              checked={isCountrySelected?.children?.find((a) =>
-                                a.name == c.name ? true : false
-                              )}
-                              value={[a?._id, c?._id]}
-                              onClick={selectAll}
+                              onChange={() => seletectedCity(d)}
                             ></input>
-                            Select all
+                            {d.name}
                           </label>
-                          <br></br>
-                          <hr />
-
-                          <div className={style.stateBox}>
-                            {c?.children?.map((d) => (
-                              <>
-                                <label key={d._id}>
-                                  <input
-                                    type="checkbox"
-                                    className="bg-gray-100"
-                                    checked={state.find((a) =>
-                                      a.name == d.name ? true : false
-                                    )}
-                                    onChange={() => seletectedCity(d)}
-                                  ></input>
-                                  {d.name}($ 0.05)
-                                </label>
-                              </>
-                            ))}
-                          </div>
-                        </div>
-                      </div>
+                        </>
+                      ))}
                     </div>
-                  ))}
-                </>
-              ) : (
-                <>
-                  {a?.children?.map((c) => (
-                    <div className="collapse collapse-arrow" key={c._id}>
-                      <input type="checkbox" className="peer" />
-                      <div className="collapse-title bg-gray-200 text-black border border-gray-300 peer-checked:bg-gray-200 peer-checked:text-black">
-                        {c.name}
-                      </div>
-                      <div className="collapse-content bg-gray-200 text-primary-content peer-checked:bg-white peer-checked:text-black">
-                        <div className={style.stateBox}>
-                          {c?.children?.map((d) => (
-                            <Link
-                              key={d._id}
-                              href={`/posts/${router?.query?.location?.[0]}/${d.name}`}
-                            >
-                              {d.name}
-                            </Link>
-                          ))}
-                        </div>
-                      </div>
-                    </div>
-                  ))}
-                </>
-              )}
-            </div>
-          </div>
-        ))}
+                  </div>
+                </div>
+              </div>
+            ))}
+          </>
+        ) : (
+          <>
+            {" "}
+            {cities?.[0]?.children?.map((c) => (
+              <div className="collapse collapse-arrow" key={c._id}>
+                <input type="checkbox" className="peer" />
+                <div className="collapse-title bg-gray-200 text-black border border-gray-300 peer-checked:bg-gray-200 peer-checked:text-black">
+                  {c.name}
+                </div>
+                <div className="collapse-content bg-gray-200 text-primary-content peer-checked:bg-white peer-checked:text-black">
+                  <div className={style.stateBox}>
+                    {c?.children?.map((d) => (
+                      <Link
+                        key={d._id}
+                        href={`/posts/${router?.query?.location?.[0]}/${d.name}`}
+                      >
+                        {d.name}
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            ))}
+          </>
+        )}
       </div>
       <Footer />
     </div>
