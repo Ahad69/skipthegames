@@ -31,7 +31,7 @@ const Dashboards = () => {
     if (session) {
       try {
         const response = await axios.get(
-          `http://localhost:5000/api/products/posterid/${session?.user?.id}?page=${pages}&searchText=${searchText}&status=${status}&category=${category}`,
+          `https://skipthegames-backend.vercel.app/api/products/posterid/${session?.user?.id}?page=${pages}&searchText=${searchText}&status=${status}&category=${category}`,
           {
             method: "GET",
           }
@@ -73,7 +73,10 @@ const Dashboards = () => {
     }).then((result) => {
       if (result.isConfirmed) {
         axios
-          .delete(`http://localhost:5000/api/products/${id}`, {})
+          .delete(
+            `https://skipthegames-backend.vercel.app/api/products/${id}`,
+            {}
+          )
           .then((response) => {
             if (response.data.status == "success") {
               Swal.fire("Deleted!", "Your file has been deleted.", "success");

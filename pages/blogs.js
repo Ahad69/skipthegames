@@ -25,7 +25,7 @@ const Blogs = () => {
   async function getBlogs() {
     try {
       const response = await axios.get(
-        `http://localhost:5000/api/blogs?page=${blogcurrent}&q=${keyword}&cat=${catKey}`
+        `https://skipthegames-backend.vercel.app/api/blogs?page=${blogcurrent}&q=${keyword}&cat=${catKey}`
       );
       const data = response.data;
 

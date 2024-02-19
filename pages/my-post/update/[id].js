@@ -116,7 +116,7 @@ let initialState = {
     async function posts(id) {
       try {
         const response = await axios.get(
-          `http://localhost:5000/api/products/${id}`,
+          `https://skipthegames-backend.vercel.app/api/products/${id}`,
           {
             method: "GET",
           }
@@ -166,10 +166,13 @@ let initialState = {
             o.imgOne = O[0].url;
           } else {
             r.append("images", O[0].originFileObj);
-            await fetch("http://localhost:5000/api/files/files", {
-              method: "POST",
-              body: r,
-            })
+            await fetch(
+              "https://skipthegames-backend.vercel.app/api/files/files",
+              {
+                method: "POST",
+                body: r,
+              }
+            )
               .then((e) => e.json())
               .then((e) => {
                 o.imgOne = e.url;
@@ -182,10 +185,13 @@ let initialState = {
             o.imgTwo = O[1].url;
           } else {
             r.append("images", O[1].originFileObj);
-            await fetch("http://localhost:5000/api/files/files", {
-              method: "POST",
-              body: r,
-            })
+            await fetch(
+              "https://skipthegames-backend.vercel.app/api/files/files",
+              {
+                method: "POST",
+                body: r,
+              }
+            )
               .then((e) => e.json())
               .then((e) => {
                 o.imgTwo = e.url;
@@ -198,10 +204,13 @@ let initialState = {
             o.imgThree = O[2].url;
           } else {
             r.append("images", O[2].originFileObj);
-            await fetch("http://localhost:5000/api/files/files", {
-              method: "POST",
-              body: r,
-            })
+            await fetch(
+              "https://skipthegames-backend.vercel.app/api/files/files",
+              {
+                method: "POST",
+                body: r,
+              }
+            )
               .then((e) => e.json())
               .then((e) => {
                 o.imgThree = e.url;
@@ -214,10 +223,13 @@ let initialState = {
             o.imgFour = O[3].url;
           } else {
             r.append("images", O[3].originFileObj);
-            await fetch("http://localhost:5000/api/files/files", {
-              method: "POST",
-              body: r,
-            })
+            await fetch(
+              "https://skipthegames-backend.vercel.app/api/files/files",
+              {
+                method: "POST",
+                body: r,
+              }
+            )
               .then((e) => e.json())
               .then((e) => {
                 o.imgFour = e.url;
@@ -232,7 +244,11 @@ let initialState = {
         };
 
         await axios
-          .patch(`http://localhost:5000/api/products/${e.query.id}`, o, options)
+          .patch(
+            `https://skipthegames-backend.vercel.app/api/products/${e.query.id}`,
+            o,
+            options
+          )
           .then((res) => {
             g(!1);
             if (res.data.status == "success") {
