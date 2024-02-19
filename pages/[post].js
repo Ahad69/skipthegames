@@ -22,7 +22,7 @@ const PostList = () => {
   const [loading, setLoading] = useState(true);
   const [gallery, setGallery] = useState([]);
   const [age, setAge] = useState("");
-  const [category, setCategory] = useState("");
+  const [category, setCategory] = useState("Adult Jobs");
   const [reload, setReload] = useState(false);
 
   async function getPosts() {
