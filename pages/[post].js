@@ -216,7 +216,7 @@ const PostList = () => {
                   </li>
                 </div>
                 <div>
-                  <select onChange={(e) => catChange(e.target.value)}>
+                  <select onChange={(e) => catChange(e.target.value)} className="border border-green-500">
                     {category ? (
                       <option>{category}</option>
                     ) : (
