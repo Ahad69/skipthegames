@@ -109,6 +109,7 @@
   }
   .desc {
     margin-left: 0px;
+  
   }
   .postImages {
     display: grid !important;
@@ -119,4 +120,7 @@
   .fImg {
     width: 100%;
   }
+                                .title {
+                                  margin-left: 2px;
+                                }
 }

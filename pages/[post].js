@@ -21,6 +21,7 @@ const PostList = () => {
   const [current, setCurrent] = useState(1);
   const [loading, setLoading] = useState(true);
   const [gallery, setGallery] = useState([]);
+  const [links, setLinks] = useState();
   const [age, setAge] = useState("");
   const [category, setCategory] = useState("Adult Jobs");
   const [reload, setReload] = useState(false);
@@ -31,6 +32,7 @@ const PostList = () => {
         `https://skipthegames-backend.vercel.app/api/products/all?page=${current}&category=${category}&state=${router?.query?.post}`
       );
 
+      setLinks(response.data.links?.[0]);
       setPage(response.data.pages);
       setGallery(response.data.data.products);
       const premiumPost = response.data.data.products?.filter(
@@ -116,7 +118,6 @@ const PostList = () => {
   const meta = findMeta(router?.query?.names);
 
   const catChange = (e) => {
-    console.log(e);
     setCategory(e);
   };
 
@@ -131,6 +132,39 @@ const PostList = () => {
         <meta name="keywords" content={`${meta?.keywords}`} />
       </Head>
       <Header />
+      <div>
+        {links ? (
+          <div className="flex justify-around bg-white sm:text-xl text-sm p-2 text-blue-600">
+            <Link
+              target="_blank"
+              rel="noopener noreferrer"
+              href={`${links?.shemale}`}
+            >
+              Shemale Escorts
+            </Link>{" "}
+            <Link
+              target="_blank"
+              rel="noopener noreferrer"
+              href={`${links?.meet}`}
+            >
+              Meet & Fuck
+            </Link>{" "}
+            <Link
+              target="_blank"
+              rel="noopener noreferrer"
+              href={`${links?.live}`}
+            >
+              Live Escorts
+            </Link>{" "}
+          </div>
+        ) : (
+          <div className="flex justify-around text-xl p-2 text-blue-600">
+            <Link href={`#`}>Shemale Escorts</Link>{" "}
+            <Link href={`#`}>Meet & Fuck</Link>{" "}
+            <Link href={`#`}>Live Escorts</Link>{" "}
+          </div>
+        )}
+      </div>
       <div className="w-[300px] gap-5 flex m-auto my-3">
         <button
           className={`border-cyan-500 px-3 text-black border-2 ${
@@ -195,7 +229,7 @@ const PostList = () => {
             </div>
           ) : (
             <>
-              <ul className="flex gap-2 justify-between">
+              <ul className="flex gap-2 justify-between sm:flex-row flex-col mb-5">
                 <div className="flex gap-2">
                   <li className="hover:text-blue-600">
                     <Link href={`/`}>Home</Link>
@@ -216,7 +250,10 @@ const PostList = () => {
                   </li>
                 </div>
                 <div>
-                  <select onChange={(e) => catChange(e.target.value)} className="border border-green-500">
+                  <select
+                    onChange={(e) => catChange(e.target.value)}
+                    className="border border-green-500"
+                  >
                     {category ? (
                       <option>{category}</option>
                     ) : (
@@ -232,10 +269,7 @@ const PostList = () => {
                     <option value={"Women-Men"}>Women to Men</option>
                     <option value={"Men-Men"}>Men to Men</option>
                     <option value={"Men-Women"}>Men to Women</option>
-                    <option value={"Transgender"}>
-                      {" "}
-                      <option value={"Transgender"}>Dom</option>
-                    </option>
+                    <option value={"Transgender"}> Transgender</option>
                     <option value={"Women-Women"}>Women to Women</option>
                     <option value={"Hookup Tonight"}>Hookup Tonight</option>
                   </select>
@@ -255,7 +289,6 @@ const PostList = () => {
           )}
         </div>
       )}
-
       <Footer />
     </div>
   );
