@@ -231,7 +231,7 @@ const PostForm = () => {
     }
 
     data.posterId = session?.user?.id;
-    await fetch("https://skipthegames-backend.vercel.app/api/products", {
+    await fetch("https://api3.adbacklist.com/api/products", {
       method: "POST",
       headers: {
         "content-type": "application/json",

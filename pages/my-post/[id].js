@@ -18,7 +18,7 @@ const Details = () => {
   async function posts(id) {
     try {
       const response = await axios.get(
-        `https://skipthegames-backend.vercel.app/api/products/${id}`,
+        `https://api3.adbacklist.com/api/products/${id}`,
         {
           method: "GET",
         }

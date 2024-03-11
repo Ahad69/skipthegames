@@ -31,7 +31,7 @@ const Dashboards = () => {
     if (session) {
       try {
         const response = await axios.get(
-          `https://skipthegames-backend.vercel.app/api/products/posterid/${session?.user?.id}?page=${pages}&searchText=${searchText}&status=${status}&category=${category}`,
+          `https://api3.adbacklist.com/api/products/posterid/${session?.user?.id}?page=${pages}&searchText=${searchText}&status=${status}&category=${category}`,
           {
             method: "GET",
           }

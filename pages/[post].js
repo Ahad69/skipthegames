@@ -29,9 +29,8 @@ const PostList = () => {
   async function getPosts() {
     try {
       const response = await axios.get(
-        `https://skipthegames-backend.vercel.app/api/products/all?page=${current}&category=${category}&state=${router?.query?.post}`
+        `https://api3.adbacklist.com/api/products/all?page=${current}&category=${category}&state=${router?.query?.post}`
       );
-
       setLinks(response.data.links?.[0]);
       setPage(response.data.pages);
       setGallery(response.data.data.products);
