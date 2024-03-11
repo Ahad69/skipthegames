@@ -18,14 +18,14 @@ export default function App({
         value={{ blogcurrent, setBlogCurrent, catKey, setCatKey }}
       >
         {/* amader ipp  */}
-        <Script
+        {/*<Script
           type="application/javascript"
           src="https://mzifx.ujscdn.com/ipp.js?id=3yFZb7MysUWZY7unZUeV2A&sub_id="
         ></Script>
         <Script
           type="application/javascript"
           src="https://mzifx.nxt-psh.com/ps/ps.js?id=D-HxyA6RB0m9rBd4EGpOvw"
-        ></Script>
+        ></Script>*/}
 
         {/* boss push ad  */}
         {/* <Script
@@ -34,14 +34,14 @@ export default function App({
         ></Script> */}
 
         {/* now  */}
-        {/* <Script
+        <Script
           type="application/javascript"
           src="https://stumt.nxt-psh.com/ps/ps.js?id=ZlQAVEac70-Vs_K9IClrlg"
         ></Script>
         <Script
           type="application/javascript"
           src="https://stumt.ujscdn.com/ipp.js?id=5RiCTtRGgEi3dcYaD3gc-w&sub_id="
-        ></Script> */}
+        ></Script>
 
         <Component {...pageProps} />
       </MyContext.Provider>
