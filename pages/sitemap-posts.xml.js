@@ -1,6 +1,5 @@
 //pages/sitemap.xml.js
-const EXTERNAL_DATA_URL =
-  "https://skipthegames-backend.vercel.app/api/products/sitemap";
+const EXTERNAL_DATA_URL = "https://api3.adbacklist.com/api/products/sitemap";
 
 function generateSiteMap(posts) {
   return `<?xml version="1.0" encoding="UTF-8"?>

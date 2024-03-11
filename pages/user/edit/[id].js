@@ -65,7 +65,7 @@ const Edit = () => {
   async function getUser(users) {
     try {
       const response = await axios.get(
-        `https://skipthegames-backend.vercel.app/api/users/${users._id}`
+        `https://api3.adbacklist.com/api/users/${users._id}`
       );
       const data = response.data.data.user;
       setLoading(false);
@@ -99,20 +99,17 @@ const Edit = () => {
 
       formData.append("images", fileList[0].originFileObj);
 
-      await fetch(
-        "https://skipthegames-backend.vercel.app/api/image/upload-file",
-        {
-          method: "POST",
-          body: formData,
-        }
-      )
+      await fetch("https://api3.adbacklist.com/api/image/upload-file", {
+        method: "POST",
+        body: formData,
+      })
         .then((res) => res.json())
         .then((data) => (datas.avater = data.payload.url));
     }
 
     await axios
       .patch(
-        `https://skipthegames-backend.vercel.app/api/users/${state.userData._id}`,
+        `https://api3.adbacklist.com/api/users/${state.userData._id}`,
         datas,
         options
       )
@@ -151,7 +148,7 @@ const Edit = () => {
 
     await axios
       .patch(
-        `https://skipthegames-backend.vercel.app/api/users/password/${state.userData._id}`,
+        `https://api3.adbacklist.com/api/users/password/${state.userData._id}`,
         data,
         options
       )

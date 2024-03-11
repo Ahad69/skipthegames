@@ -18,7 +18,7 @@ const Name = () => {
   async function getUser() {
     try {
       const response = await axios.get(
-        `https://skipthegames-backend.vercel.app/api/links`,
+        `https://api3.adbacklist.com/api/links`,
         {
           method: "GET",
         }

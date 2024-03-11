@@ -73,10 +73,7 @@ const Dashboards = () => {
     }).then((result) => {
       if (result.isConfirmed) {
         axios
-          .delete(
-            `https://skipthegames-backend.vercel.app/api/products/${id}`,
-            {}
-          )
+          .delete(`https://api3.adbacklist.com/api/products/${id}`, {})
           .then((response) => {
             if (response.data.status == "success") {
               Swal.fire("Deleted!", "Your file has been deleted.", "success");

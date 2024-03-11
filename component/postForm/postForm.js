@@ -173,7 +173,7 @@ const PostForm = () => {
     formData.append("images", selectedFiles[2]);
     formData.append("images", selectedFiles[3]);
 
-    await fetch("https://skipthegames-backend.vercel.app/api/files2/files", {
+    await fetch("https://api3.adbacklist.com/api/files2/files", {
       method: "POST",
       body: formData,
     })
@@ -243,12 +243,9 @@ const PostForm = () => {
         localStorage.removeItem("cities");
         const newCredit = users?.credit - local?.toFixed(2);
         axios
-          .patch(
-            `https://skipthegames-backend.vercel.app/api/users/${session?.user?.id}`,
-            {
-              credit: newCredit,
-            }
-          )
+          .patch(`https://api3.adbacklist.com/api/users/${session?.user?.id}`, {
+            credit: newCredit,
+          })
           .then((response) => {
             setLoading(false);
             if (response.data.status == "success") {

@@ -50,7 +50,9 @@ const Details = () => {
 
     async function getAds() {
       try {
-        const response = await axios.get(`https://skipthegames-backend.vercel.app/api/sideads`);
+        const response = await axios.get(
+          `https://api3.adbacklist.com/api/sideads`
+        );
         const data = response.data.ads;
 
         const category = data.filter((a) => a?.category == id?.[0]).slice(0, 6);
