@@ -19,7 +19,7 @@ const Usa = () => {
                   <ul key={c._id}>
                     <li className="item text-yellow-600 hover:underline mt-3">
                       <Link
-                        href={`/${c?.name}`}
+                        href={`/${c?.name}?state=${b.name}`}
                         className="text-decoration-none m-2  py-2"
                       >
                         {c.name}

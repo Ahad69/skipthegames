@@ -19,29 +19,22 @@ export default function Home() {
         <title>
           Skip the Games Your Go To Destination for Fun and female escort 
         </title>
-        <meta
-          name="description"
-          content="Find the ultimate pleasure without the hassle. Skip the games and discover top-notch female escorts in CT, N.C, NJ, and more. 
-Indulge in a discreet and unforgettable experience with Escort Dude. Explore Tryst San Antonio escorts for an adventure like no other. 
-Satisfaction guaranteed!"
-        />
+        <meta name="description" content="" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         {/* <meta
           name="google-site-verification"
           content="TYiSHLlk3Y-BJ095SPo4lMOG4hSRTUyxfIKdLR-_sfs"
         /> */}
         <meta
+          name="canonical"
+          rel="canonical"
+          href="https://skipthegames.bio/"
+        />
+        <meta
           name="title"
           content="Skip the Games Your Go To Destination for Fun and female escort "
         />
-        <meta
-          name="keywords"
-          content="Skip the Games, female escort, Tryst San Antonio escorts, skipthe games, skip yhe games, akip the games, skip the games wv,
-          skip the games hudson valley,
-          skip the games worcester,
-          skip the game hudson valley,
-          skip the games cape cod"
-        />
+        <meta name="keywords" content="" />
         <link rel="icon" href="/favicon.ico" />
 
         {/* <link rel="icon" href="/logo.png" /> */}
@@ -59,8 +52,8 @@ Satisfaction guaranteed!"
             <Search />
             <Index />
           </div>
-          <div className="sm:w-9/12 m-auto rounded bg-slate-200 p-3 mt-10">
-            <h1 className="sm:text-3xl text-xl font-bold text-blue-400">
+          <div className="sm:w-9/12 m-auto rounded  p-3 mt-10">
+            <h1 className="sm:text-3xl text-xl font-bold text-blue-500 text-center">
               {" "}
               Ø Skip The Games
             </h1>
@@ -71,22 +64,39 @@ Satisfaction guaranteed!"
               wide range of services and aims to create a seamless experience
               with adult service providers and clients safely & securely. Users
               can find various services such as escorts, massages,{" "}
-              <b>Escort alligator </b> and <b> adult mangas </b> other adult
-              mangas content on the platform. It offers the convenience of
-              posting in multiple cities at once and allows you to save your ads
-              for easy reposting.
+              <b>
+                <Link className="text-green-500 text-center" href={"/"}>
+                  Escort alligator{" "}
+                </Link>
+              </b>{" "}
+              and{" "}
+              <b>
+                {" "}
+                <Link className="text-green-500 text-center" href={"/"}>
+                  adult mangas{" "}
+                </Link>{" "}
+              </b>{" "}
+              other adult mangas content on the platform. It offers the
+              convenience of posting in multiple cities at once and allows you
+              to save your ads for easy reposting.
             </p>
             <br />
             <p>
               With constantly updated listings, Skip the Games ensures that you
               can find the satisfaction you're looking for. Whether you're new
-              to the world of <b> adult dating services </b> or a seasoned
-              client, Skip the Games is a reliable platform to meet your desires
-              and explore casual encounters in your city without any financial
-              obligations.
+              to the world of{" "}
+              <b>
+                {" "}
+                <Link className="text-green-500 text-center" href={"/"}>
+                  adult dating services{" "}
+                </Link>{" "}
+              </b>{" "}
+              or a seasoned client, Skip the Games is a reliable platform to
+              meet your desires and explore casual encounters in your city
+              without any financial obligations.
             </p>
             <br /> <br />
-            <h1 className="sm:text-3xl text-xl font-bold text-blue-400">
+            <h1 className="sm:text-3xl text-xl font-bold text-blue-500 text-center">
               Ø Why skip the Games is Popular?
             </h1>
             <br />
@@ -122,7 +132,7 @@ Satisfaction guaranteed!"
               some valuable safety tips for users.
             </p>
             <br />{" "}
-            <h1 className="sm:text-3xl text-xl font-bold text-blue-400">
+            <h1 className="sm:text-3xl text-xl font-bold text-blue-500 text-center">
               Ø History and Services Of Skip The Games
             </h1>
             <br />
@@ -157,14 +167,14 @@ Satisfaction guaranteed!"
                 {" "}
                 <b>
                   Access Top verified escorts on the{" "}
-                  <Link className="text-blue-400" href={"/"}>
+                  <Link className="text-green-500 text-center" href={"/"}>
                     SkipTheGames.bio
                   </Link>
                 </b>
               </li>
             </ul>
             <br /> <br />
-            <h1 className="sm:text-3xl text-xl font-bold text-blue-400">
+            <h1 className="sm:text-3xl text-xl font-bold text-blue-500 text-center">
               Ø How Can I Use Skipthegames.bio?
             </h1>
             <br />
@@ -175,7 +185,7 @@ Satisfaction guaranteed!"
             <br />
             <p>
               There is no cost for using{" "}
-              <Link className="text-blue-700 font-bold lowercase" href={"/"}>
+              <Link className="text-green-500 font-bold lowercase" href={"/"}>
                 SkipTheGames.bio
               </Link>{" "}
               all the listings are free. You just have to create your free
@@ -190,17 +200,17 @@ Satisfaction guaranteed!"
             </p>
             <br />
             <br /> <br />
-            <h1 className="sm:text-3xl text-xl font-bold text-blue-400">
+            <h1 className="sm:text-3xl text-xl font-bold text-blue-500 text-center">
               Ø Is Skip the games safe to use?
             </h1>
             <br />
             <p>
               Yes! Yes and Yes! It’s Totally free and Safe to use{" "}
-              <Link className="text-blue-700 font-bold lowercase" href={"/"}>
+              <Link className="text-green-500 font-bold lowercase" href={"/"}>
                 SkipTheGames.bio
               </Link>
               . When users come to meet{" "}
-              <Link className="text-blue-700 font-bold lowercase" href={"/"}>
+              <Link className="text-green-500 font-bold lowercase" href={"/"}>
                 Tryst escort
               </Link>{" "}
               there is always some reason to be concerned. Our team does its due
@@ -216,7 +226,7 @@ Satisfaction guaranteed!"
               women in your area.
             </p>
             <br /> <br />
-            <h1 className="sm:text-3xl text-xl font-bold text-blue-400">
+            <h1 className="sm:text-3xl text-xl font-bold text-blue-500 text-center">
               Ø Benefits Of Choosing To Skip The Games
             </h1>
             <br />
@@ -233,7 +243,7 @@ Satisfaction guaranteed!"
               on real-life interactions and pursuits. This can lead to a sense
               of fulfilment and satisfaction that may not be achieved through
               gaming. Additionally, opting to{" "}
-              <Link className="text-blue-700 font-bold " href={"/"}>
+              <Link className="text-green-500 font-bold " href={"/"}>
                 escort NC
               </Link>{" "}
               rather than engaging in games can lead to meaningful connections
@@ -242,7 +252,7 @@ Satisfaction guaranteed!"
             <br />
             <p>
               Find the perfect{" "}
-              <Link className="text-blue-700 font-bold" href={"/"}>
+              <Link className="text-green-500 font-bold" href={"/"}>
                 BBW escort{" "}
               </Link>{" "}
               for a night to remember. There is no sex work allowed there for
@@ -258,7 +268,7 @@ Satisfaction guaranteed!"
             </p>
             <br />
             <p>
-              <Link className="text-blue-700 font-bold" href={"/"}>
+              <Link className="text-green-500 font-bold" href={"/"}>
                 Skip the Games
               </Link>{" "}
               offers a convenient platform to connect with adult service
@@ -269,14 +279,14 @@ Satisfaction guaranteed!"
               resource for fulfilling adult entertainment needs.
             </p>
             <br /> <br />
-            <h1 className="sm:text-3xl text-xl font-bold text-blue-400">
+            <h1 className="sm:text-3xl text-xl font-bold text-blue-500 text-center">
               Ø Is skip the games legit reddit ?
             </h1>
             <br />
             <p>
               Looking for a legit way to skip the games and level up your
               entertainment?{" "}
-              <Link className="text-blue-700 font-bold lowercase" href={"/"}>
+              <Link className="text-green-500 font-bold lowercase" href={"/"}>
                 SkiptheGames.bio
               </Link>{" "}
               is your ultimate destination for fun, excitement, and endless
@@ -289,13 +299,13 @@ Satisfaction guaranteed!"
               real deal!
             </p>
             <br /> <br />
-            <h1 className="sm:text-3xl text-xl font-bold text-blue-400">
+            <h1 className="sm:text-3xl text-xl font-bold text-blue-500 text-center">
               Ø Are there cops on skip the games?
             </h1>
             <br />
             <p>
               Using{" "}
-              <Link className="text-blue-700 font-bold lowercase" href={"/"}>
+              <Link className="text-green-500 font-bold lowercase" href={"/"}>
                 SkiptheGames.bio
               </Link>{" "}
               Can Lead to Prostitution Charges. This includes sites like Adult
@@ -305,7 +315,7 @@ Satisfaction guaranteed!"
               delinquent, sinner
             </p>
             <br /> <br />
-            <h1 className="sm:text-3xl text-xl font-bold text-blue-400">
+            <h1 className="sm:text-3xl text-xl font-bold text-blue-500 text-center">
               Ø Safety Tips For Users
             </h1>
             <br />
@@ -315,38 +325,39 @@ Satisfaction guaranteed!"
             </p>
             <br />
             <p>
-              <b>Choose reputable escorts: </b> Focus on verified escorts with
-              positive reviews and ratings from previous clients.
+              <b className="text-pink-800">Choose reputable escorts: </b> Focus
+              on verified escorts with positive reviews and ratings from
+              previous clients.
             </p>
             <br />
             <p>
-              <b> Protect your identity: </b> Avoid sharing personal
-              information, such as your full name, address, or financial
-              details, with anyone on the platform.
+              <b className="text-pink-800"> Protect your identity: </b> Avoid
+              sharing personal information, such as your full name, address, or
+              financial details, with anyone on the platform.
             </p>
             <br />
             <p>
-              <b>Communicate safely: </b> Utilise the messaging features
-              provided by Skip the Games to communicate with escorts instead of
-              sharing personal contact details prematurely.
+              <b className="text-pink-800">Communicate safely: </b> Utilise the
+              messaging features provided by Skip the Games to communicate with
+              escorts instead of sharing personal contact details prematurely.
             </p>
             <br />
             <p>
-              <b>Meet in public: </b> Prioritise meeting in a public place for
-              your own safety. Inform a trusted friend or family member about
-              your plans and whereabouts.
+              <b className="text-pink-800">Meet in public: </b> Prioritise
+              meeting in a public place for your own safety. Inform a trusted
+              friend or family member about your plans and whereabouts.
             </p>
             <br />
             <p>
-              <b>Trust your instincts: </b> If something feels off or
-              suspicious, trust your gut and consider discontinuing
-              communication or ending a meeting.
+              <b className="text-pink-800">Trust your instincts: </b> If
+              something feels off or suspicious, trust your gut and consider
+              discontinuing communication or ending a meeting.
             </p>
             <br />
             <p>
-              <b> Report suspicious activity: </b> If you encounter any
-              suspicious profiles, scams, or unsafe situations on Skip the
-              Games, report them to the platform immediately.
+              <b className="text-pink-800"> Report suspicious activity: </b> If
+              you encounter any suspicious profiles, scams, or unsafe situations
+              on Skip the Games, report them to the platform immediately.
             </p>
             <br />
             <p>

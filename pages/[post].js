@@ -1,4 +1,5 @@
 import { findMeta } from "@/component/categorymeta";
+import { findCityMeta } from "@/component/cityMeta";
 import Footer from "@/component/footer/footer";
 import Gallery from "@/component/gallery/gallery";
 import Header from "@/component/header/header";
@@ -114,7 +115,10 @@ const PostList = () => {
     setAge(useOld);
   }, [reload]);
 
-  const meta = findMeta(router?.query?.names);
+  const meta = findCityMeta({
+    city: router?.query?.post,
+    state: router?.query?.state,
+  });
 
   const catChange = (e) => {
     setCategory(e);
@@ -129,6 +133,12 @@ const PostList = () => {
         <meta name="description" content={`${meta?.description}`} />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="keywords" content={`${meta?.keywords}`} />
+        <link
+          name="canonical"
+          rel="canonical"
+          href="https://skipthegames.bio/"
+        />{" "}
+        <meta name="robots" content="index,follow" />
       </Head>
       <Header />
       <div>
