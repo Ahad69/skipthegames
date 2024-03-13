@@ -124,6 +124,7 @@ const PostList = () => {
     setCategory(e);
   };
 
+
   return (
     <div className="bg-gray-200">
       <Head>
@@ -136,7 +137,7 @@ const PostList = () => {
         <link
           name="canonical"
           rel="canonical"
-          href="https://skipthegames.bio/"
+          href={`https://skipthegames.bio/${router?.query?.post}`}
         />{" "}
         <meta name="robots" content="index,follow" />
       </Head>

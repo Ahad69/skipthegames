@@ -25,18 +25,17 @@ export default function Home() {
           name="google-site-verification"
           content="TYiSHLlk3Y-BJ095SPo4lMOG4hSRTUyxfIKdLR-_sfs"
         /> */}
-        <meta
+        <link
           name="canonical"
           rel="canonical"
-          href="https://skipthegames.bio/"
-        />
+          href={`https://skipthegames.bio/`}
+        />{" "}
         <meta
           name="title"
           content="Skip the Games Your Go To Destination for Fun and female escort "
         />
         <meta name="keywords" content="" />
         <link rel="icon" href="/favicon.ico" />
-
         {/* <link rel="icon" href="/logo.png" /> */}
         <meta
           name="google-site-verification"

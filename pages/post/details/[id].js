@@ -63,18 +63,22 @@ const Details = () => {
     }
 
     const meta = findPostMeta(router.query);
-
+    console.log(router?.asPath);
     return (
       <div>
         <Head>
           <link rel="icon" href="/logo.png" />
           <title>{postDetails?.name?.slice(0, 65)}</title>
-
           <meta name="title" content={`${postDetails?.name?.slice(0, 65)}`} />
           <meta
             name="description"
             content={`${postDetails?.description?.slice(0, 318)}`}
-          />
+          />{" "}
+          <link
+            name="canonical"
+            rel="canonical"
+            href={`https://skipthegames.bio${router?.asPath}`}
+          />{" "}
           <meta name="viewport" content="width=device-width, initial-scale=1" />
           <meta name="keywords" content={`${meta?.keywords}`} />
         </Head>
