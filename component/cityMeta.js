@@ -2,7 +2,7 @@ export const findCityMeta = ({ city, state }) => {
   const datas = [
     {
       id: 1,
-      title: `Find The Best Cheap escorts at Skip the Game in ${city}  ${state.slice(
+      title: `Find The Best Cheap escorts at Skip the Game in ${city}  ${state?.slice(
         0,
         2
       )}`,
