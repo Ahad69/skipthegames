@@ -137,7 +137,7 @@ const PostList = () => {
         <link
           name="canonical"
           rel="canonical"
-          href={`https://skipthegames.bio/${router?.query?.post}`}
+          href={`https://skipthegames.bio${router?.asPath}`}
         />{" "}
         <meta name="robots" content="index,follow" />
       </Head>
