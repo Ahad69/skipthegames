@@ -207,7 +207,12 @@ const PostList = () => {
           style={{ height: "700px" }}
           className="flex justify-center items-center"
         >
-          <img className="" width={100} src="/loader.gif" />
+          <img
+            className=""
+            width={100}
+            src="/loader.gif"
+            alt="skipthegames.bio"
+          />
         </div>
       ) : (
         <div className="sm:w-9/12 m-auto my-5 bg-white p-3 rounded text-black">

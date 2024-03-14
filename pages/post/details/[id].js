@@ -157,7 +157,12 @@ const Details = () => {
               </div>
               <div className="m-5 p-3 bg-white">
                 {loading ? (
-                  <img className="block m-auto" width={100} src="/loader.gif" />
+                  <img
+                    className="block m-auto"
+                    width={100}
+                    src="/loader.gif"
+                    alt="skipthegames.bio"
+                  />
                 ) : (
                   <>
                     <h1 className="text-lg text-black font-bold sm:text-2xl ">

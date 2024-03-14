@@ -64,7 +64,12 @@ const BlogDetails = () => {
       </Head>
       <Header />
       {isloading ? (
-        <img className="block m-auto" width={100} src="/loader.gif" />
+        <img
+          className="block m-auto"
+          width={100}
+          src="/loader.gif"
+          alt="skipthegames.bio"
+        />
       ) : (
         <>
           <div className={style.blogContainer}>
