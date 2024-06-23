@@ -6,6 +6,7 @@ import { Inter } from "next/font/google";
 import Script from "next/script";
 import Link from "next/link";
 import ScrollToTop from "react-scroll-to-top";
+import Responsive from "@/component/responsive/responsive";
 
 const Index = dynamic(() => import("@/component/countries"));
 const Header2 = dynamic(() => import("@/component/header/header2"));
@@ -55,6 +56,7 @@ export default function Home() {
             <Search />
             <Index />
           </div>
+          <Responsive />
           <div className="sm:w-9/12 m-auto rounded  p-3 mt-10">
             <h1 className="sm:text-3xl text-xl font-bold text-blue-500 text-center">
               {" "}
