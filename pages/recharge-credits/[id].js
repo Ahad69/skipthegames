@@ -39,7 +39,7 @@ const Credits = () => {
     requested = true;
     try {
       const response = await axios.post(
-        `https://api3.adbacklist.com/api/recharge/${id}`,
+        `https://skipthegames-backend.vercel.app/api/recharge/${id}`,
         { amount },
         {
           headers: {
@@ -69,7 +69,7 @@ const Credits = () => {
   //     invoice: randomnum,
   //   };
   //   await axios
-  //     .post("https://api3.adbacklist.com/api/transaction", data)
+  //     .post("https://skipthegames-backend.vercel.app/api/transaction", data)
 
   //     .then((response) => {
   //       if (response.data.status == "success") {

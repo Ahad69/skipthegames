@@ -12,7 +12,7 @@ export const authOptions = {
   callbacks: {
     async signIn({ user, profile }) {
       await axios
-        .post("https://api3.adbacklist.com/api/users/save", profile)
+        .post("https://skipthegames-backend.vercel.app/api/users/save", profile)
 
         .then((response) => {
           user.id = response.data.isExist._id;
