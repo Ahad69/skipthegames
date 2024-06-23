@@ -9,7 +9,7 @@ const Responsive = () => {
   async function getads() {
     try {
       const response = await axios.get(
-        `http://localhost:5000/api/responsive-ads/`,
+        `https://skipthegames-backend.vercel.app/api/responsive-ads/`,
         {
           method: "GET",
         }
