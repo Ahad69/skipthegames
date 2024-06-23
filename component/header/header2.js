@@ -88,9 +88,7 @@ const Header2 = ({ linked }) => {
                       </button>
                     </Link>
                   </li>
-                  <li>
-                    <Link href="/blogs">Blogs</Link>
-                  </li>
+
                   <li>
                     <Link href="/login">Login/SignUp</Link>
                   </li>
@@ -110,9 +108,7 @@ const Header2 = ({ linked }) => {
             <Link
               className="sm:hidden block ml-auto w-[130px] text-blue-600 font-bold text-center h-[20px]"
               target="_blank"
-              href={
-                "https://afflat3e1.com/trk/lnk/A0D036C0-8FCB-4C42-8320-D5CC21C8984E/?o=16837&c=918277&a=688040&k=4BC74FE55981762CB9D625CA6FC57983&l=18032"
-              }
+              href={"https://datingembrace.life/?u=0pmp605&o=19akabb"}
             >
               Meet & Fuck
             </Link>{" "}
@@ -136,9 +132,7 @@ const Header2 = ({ linked }) => {
                   <Link
                     className="text-blue-600"
                     target="_blank"
-                    href={
-                      "https://afflat3e1.com/trk/lnk/A0D036C0-8FCB-4C42-8320-D5CC21C8984E/?o=16837&c=918277&a=688040&k=4BC74FE55981762CB9D625CA6FC57983&l=18032"
-                    }
+                    href={"https://datingembrace.life/?u=0pmp605&o=19akabb"}
                   >
                     Meet & Fuck
                   </Link>
@@ -156,16 +150,12 @@ const Header2 = ({ linked }) => {
                   <Link
                     className="text-blue-600"
                     target="_blank"
-                    href={
-                      "https://afflat3e1.com/trk/lnk/A0D036C0-8FCB-4C42-8320-D5CC21C8984E/?o=16837&c=918277&a=688040&k=4BC74FE55981762CB9D625CA6FC57983&l=18032"
-                    }
+                    href={"https://datingembrace.life/?u=0pmp605&o=19akabb"}
                   >
                     Meet & Fuck
                   </Link>
                 </li>
-                <li>
-                  <Link href="/blogs">Blogs</Link>
-                </li>
+
                 <li>
                   <Link href="/login">Login/SignUp</Link>
                 </li>

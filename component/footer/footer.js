@@ -62,11 +62,7 @@ const Footer = () => {
               </Link>
             </li>
             <li className={style.item}>
-              <Link
-                href="/blogs"
-                className="link text-uppercase"
-                title="Contact"
-              >
+              <Link href="/blogs" className="link text-uppercase" title="Blogs">
                 Blogs
               </Link>
             </li>

@@ -5,6 +5,7 @@ import styles from "../styles/moduleCss/home.module.css";
 import { Inter } from "next/font/google";
 import Script from "next/script";
 import Link from "next/link";
+import ScrollToTop from "react-scroll-to-top";
 
 const Index = dynamic(() => import("@/component/countries"));
 const Header2 = dynamic(() => import("@/component/header/header2"));
@@ -17,9 +18,12 @@ export default function Home() {
     <>
       <Head>
         <title>
-          Skip the Games Your Go To Destination for Fun and female escort 
+          Skip the Games is the best cheap escorts for Fun & Erotic Massage
         </title>
-        <meta name="description" content="" />
+        <meta
+          name="description"
+          content="The Best female escort at Skip the Game. Best Cheap escorts alligator looking for Cheap & Tryst escort services. Find real female escort with skip da game"
+        />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         {/* <meta
           name="google-site-verification"
@@ -32,7 +36,7 @@ export default function Home() {
         />{" "}
         <meta
           name="title"
-          content="Skip the Games Your Go To Destination for Fun and female escort "
+          content="Skip the Games is the best cheap escorts for Fun & Erotic Massage"
         />
         <meta name="keywords" content="" />
         <link rel="icon" href="/favicon.ico" />
@@ -368,7 +372,7 @@ export default function Home() {
           </div>
         </div>
         <br />
-
+        <ScrollToTop smooth color="#05BAF1" />
         <Footer />
       </main>
     </>

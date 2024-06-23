@@ -113,3 +113,18 @@ td {
 th {
   background-color: #025a83;
 }
+.scroll-to-top {
+  background: #05BAF1 !important;
+  color: white !important;
+  box-shadow: none !important;
+  border-radius: 50% !important;
+  z-index: 20 !important;
+}
+
+.scroll-to-top svg {
+  fill: #fff !important;
+  margin: auto;
+  width: 22px !important;
+
+
+}
