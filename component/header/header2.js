@@ -103,7 +103,7 @@ const Header2 = ({ linked }) => {
           <Link className="hidden sm:block" href={"/user/post"}>
             <button className={styles.postButton}> + Post Ad </button>
           </Link>
-          <button>
+          {/*<button>
             {" "}
             <Link
               className="sm:hidden block ml-auto w-[130px] text-blue-600 font-bold text-center h-[20px]"
@@ -112,7 +112,7 @@ const Header2 = ({ linked }) => {
             >
               Meet & Fuck
             </Link>{" "}
-          </button>
+          </button>*/}
         </div>
 
         <div className="navbar-end">
@@ -128,7 +128,7 @@ const Header2 = ({ linked }) => {
                     <Link href="/dashboard/profile">My Account</Link>
                   </li>
                 )}
-                <li className="mr-2">
+                {/*<li className="mr-2">
                   <Link
                     className="text-blue-600"
                     target="_blank"
@@ -136,7 +136,7 @@ const Header2 = ({ linked }) => {
                   >
                     Meet & Fuck
                   </Link>
-                </li>
+                </li>*/}
                 <li
                   className="bg-red-600 p-2 text-white font-bold"
                   onClick={() => signOut()}
@@ -146,7 +146,7 @@ const Header2 = ({ linked }) => {
               </>
             ) : (
               <>
-                <li>
+                {/*<li>
                   <Link
                     className="text-blue-600"
                     target="_blank"
@@ -154,7 +154,7 @@ const Header2 = ({ linked }) => {
                   >
                     Meet & Fuck
                   </Link>
-                </li>
+                </li>*/}
 
                 <li>
                   <Link href="/login">Login/SignUp</Link>

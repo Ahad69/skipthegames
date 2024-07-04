@@ -56,7 +56,7 @@ export default function Home() {
             <Search />
             <Index />
           </div>
-          <Responsive />
+          {/*<Responsive />*/}
           <div className="sm:w-9/12 m-auto rounded  p-3 mt-10">
             <h1 className="sm:text-3xl text-xl font-bold text-blue-500 text-center">
               {" "}
