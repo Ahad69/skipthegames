@@ -15,39 +15,27 @@ const Dashboards = () => {
   const { data: session } = useSession();
   const [loading, setLoading] = useState(false);
   const [rechargeHistory, setRechargeHistory] = useState([]);
-  const itemsPerPage2 = 10;
-
-  const [itemOffset2, setItemOffset2] = useState(0);
-  const endOffset2 = itemOffset2 + itemsPerPage2;
-  const recharge = rechargeHistory?.slice(itemOffset2, endOffset2);
-  const pageCount2 = Math?.ceil(rechargeHistory?.length / itemsPerPage2);
-
-  const handlePageClick2 = (event) => {
-    const newOffset = (event.selected * itemsPerPage2) % rechargeHistory.length;
-    setItemOffset2(newOffset);
-  };
 
   async function transactions() {
-    if (session?.user?.id) {
-      try {
-        const response = await axios.get(
-          `https://skipthegames-backend.vercel.app/api/diposit/get/${session?.user?.id}`,
-          {
-            method: "GET",
-          }
-        );
-
-        if (response?.code == 404) {
-          setRechargeHistory([]);
-        } else {
-          const trans = response.data?.data?.deposits;
-          setRechargeHistory(trans);
-          setLoading(false);
+    //if (session?.user?.id) {
+    try {
+      const response = await axios.get(
+        `https://skipthegames-backend.vercel.app/api/deposit/get/${session?.user?.id}`,
+        {
+          method: "GET",
         }
-      } catch (error) {
-        console.log(error);
+      );
+      if (response?.code == 404) {
+        setRechargeHistory([]);
+      } else {
+        const trans = response.data?.deposits;
+        setRechargeHistory(trans);
+        setLoading(false);
       }
+    } catch (error) {
+      console.log(error);
     }
+    //}
   }
 
   useEffect(() => {
@@ -109,7 +97,7 @@ const Dashboards = () => {
               {rechargeHistory?.length == 0 ? (
                 <p className="text-3xl text-center ">No Data Found</p>
               ) : (
-                <div className="overflow-x-auto text-black">
+                <div className="overflow-x-auto text-black ">
                   <table className="table table-compact w-full">
                     <thead>
                       <tr>
@@ -118,27 +106,27 @@ const Dashboards = () => {
                         <th className="bg-black text-white">Provider</th>
                         <th className="bg-black text-white">Status</th>
                         <th className="bg-black text-white">Amount</th>
-                        <th className="bg-black text-white">User</th>
+                        <th className="bg-black text-white">TRX</th>
                         {/* <th className="w-2/12 bg-black text-white">Action</th> */}
                       </tr>
                     </thead>
                     <tbody>
-                      {recharge?.map((a, index) => (
+                      {rechargeHistory?.map((a, index) => (
                         <tr>
-                          <th>{index + 1}</th>
-                          <td>{a?.date}</td>
-                          <td>{a?.provider}</td>
-                          <td className="text-center">
+                          <th className="bg-white">{index + 1}</th>
+                          <td className="bg-white">
+                            {new Date(a?.createdAt).toDateString()}
+                          </td>
+                          <td className="bg-white">{a?.provider}</td>
+                          <td className="text-center bg-white">
                             <p className="bg-red-400 w-full sm:w-6/12 rounded text-white">
                               {a?.status == "pending" ? "Pending" : "Success"}
                             </p>
                           </td>
-                          <td className="font-bold text-red-600">
+                          <td className="font-bold text-red-600 bg-white">
                             ${a?.amount}
                           </td>
-                          <td className="">
-                            {a?.email ? a?.email : users?.email}
-                          </td>
+                          <td className="bg-white">{a?.trxid}</td>
 
                           {/* <td className="flex justify-between">
                           {" "}
@@ -167,30 +155,6 @@ const Dashboards = () => {
               )}
             </>
           )}
-          <div className={`${style.pagination}`}>
-            <ReactPaginate
-              breakLabel="..."
-              nextLabel="Next >"
-              onPageChange={handlePageClick2}
-              pageRangeDisplayed={5}
-              activeClassName="active"
-              pageCount={pageCount2}
-              previousLabel="< Previous"
-              renderOnZeroPageCount={null}
-            />
-          </div>
-          <div className={`${style.pagination2}`}>
-            <ReactPaginate
-              breakLabel="..."
-              nextLabel=">"
-              onPageChange={handlePageClick2}
-              pageRangeDisplayed={5}
-              activeClassName="active"
-              pageCount={pageCount2}
-              previousLabel="<"
-              renderOnZeroPageCount={null}
-            />
-          </div>
         </div>
       </div>
       <Footer />
