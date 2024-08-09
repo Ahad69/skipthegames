@@ -31,7 +31,7 @@ const Dashboards = () => {
     if (session?.user?.id) {
       try {
         const response = await axios.get(
-          `https://skipthegames-backend.vercel.app/api/diposit/${session?.user?.id}`,
+          `https://skipthegames-backend.vercel.app/api/diposit/get/${session?.user?.id}`,
           {
             method: "GET",
           }
