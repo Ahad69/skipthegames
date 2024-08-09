@@ -40,7 +40,7 @@ const Dashboards = () => {
         if (response?.code == 404) {
           setRechargeHistory([]);
         } else {
-          const trans = response.data?.data?.transactions;
+          const trans = response.data?.data?.deposits;
           setRechargeHistory(trans);
           setLoading(false);
         }
@@ -115,7 +115,7 @@ const Dashboards = () => {
                       <tr>
                         <th className="bg-black text-white"></th>
                         <th className="bg-black text-white">Date</th>
-                        <th className="bg-black text-white">Invoice</th>
+                        <th className="bg-black text-white">Provider</th>
                         <th className="bg-black text-white">Status</th>
                         <th className="bg-black text-white">Amount</th>
                         <th className="bg-black text-white">User</th>
@@ -127,17 +127,17 @@ const Dashboards = () => {
                         <tr>
                           <th>{index + 1}</th>
                           <td>{a?.date}</td>
-                          <td>{a?.invoice}</td>
+                          <td>{a?.provider}</td>
                           <td className="text-center">
                             <p className="bg-red-400 w-full sm:w-6/12 rounded text-white">
-                              {a?.isCompleted == "Done" ? "Success" : "Pending"}
+                              {a?.status == "pending" ? "Pending" : "Success"}
                             </p>
                           </td>
                           <td className="font-bold text-red-600">
                             ${a?.amount}
                           </td>
                           <td className="">
-                            {a?.userId?.email ? a?.userId?.email : users?.email}
+                            {a?.email ? a?.email : users?.email}
                           </td>
 
                           {/* <td className="flex justify-between">
