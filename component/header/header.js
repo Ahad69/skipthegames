@@ -9,7 +9,7 @@ const Header = ({ data }) => {
         <Link href={`/`}>
           <h1 className={style.title}>SKIPTHEGAMES</h1>
         </Link>
-        <Link href={"/user/local-ads"}>
+        <Link href={"/user/post"}>
           <button className={style.postButton}> + Post Ad</button>
         </Link>
       </div>
