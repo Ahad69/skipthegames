@@ -62,7 +62,7 @@ const Header2 = ({ linked }) => {
                     </li>
                   )}
                   <li>
-                    <Link target="_blank" href={"/user/post"}>
+                    <Link target="_blank" href={"/user/local-ads"}>
                       <button className={styles.postButton2}>
                         {" "}
                         + Post Ad{" "}
@@ -81,7 +81,7 @@ const Header2 = ({ linked }) => {
               ) : (
                 <>
                   <li className="">
-                    <Link target="_blank" href={"/user/post"}>
+                    <Link target="_blank" href={"/user/local-ads"}>
                       <button className={styles.postButton2}>
                         {" "}
                         + Post Ad{" "}
@@ -100,7 +100,7 @@ const Header2 = ({ linked }) => {
             {" "}
             <Link href="/">SKIPTHEGAMES</Link>{" "}
           </h1>
-          <Link className="hidden sm:block" href={"/user/post"}>
+          <Link className="hidden sm:block" href={"/user/local-ads"}>
             <button className={styles.postButton}> + Post Ad </button>
           </Link>
           {/*<button>
