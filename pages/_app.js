@@ -2,6 +2,7 @@ import "@/styles/globals.css";
 import { SessionProvider } from "next-auth/react";
 import Script from "next/script";
 import { createContext, useState } from "react";
+import "react-quill/dist/quill.snow.css";
 
 export const MyContext = createContext();
 

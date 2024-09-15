@@ -13,6 +13,9 @@ import { Radio, message } from "antd";
 import Link from "next/link";
 import User from "../user";
 import { useSession } from "next-auth/react";
+import dynamic from "next/dynamic";
+
+const ReactQuill = dynamic(() => import("react-quill"), { ssr: false });
 
 const initialState = {
   name: "",
@@ -92,11 +95,9 @@ const PostForm = () => {
 
   const subCategories = categories.find((e) => e.name == state.category);
 
-  const editorRef = useRef(null);
-  const log = () => {
-    if (editorRef.current) {
-      setState({ ...state, description: editorRef.current.getContent() });
-    }
+  const log = (e) => {
+    console.log(e);
+    setState({ ...state, description: e });
   };
 
   const options = [
@@ -269,6 +270,17 @@ const PostForm = () => {
       });
   };
 
+  const modules = {
+    toolbar: [
+      [{ header: "1" }, { header: "2" }, { font: [] }],
+      [{ list: "ordered" }, { list: "bullet" }],
+      ["bold", "italic", "underline"],
+      [{ color: [] }, { background: [] }],
+      ["link", "image"],
+      [{ align: [] }],
+    ],
+  };
+
   return (
     <div className="sm:mx-20">
       <h1 className="text-lg mb-5 text-black sm:text-2xl">
@@ -411,8 +423,14 @@ const PostForm = () => {
           </select>
         </label>
       </div>
-      <div className="sm:w-full w-full m-auto pt-10 ">
-        <label className="text-black font-bold text-xs sm:text-xl">
+      <div className="sm:w-full w-full m-auto mb-5 pt-10 ">
+        <ReactQuill
+          value={state?.description}
+          onChange={log}
+          className="h-[350px] rounded"
+          modules={modules}
+        />
+        {/*<label className="text-black font-bold text-xs sm:text-xl">
           <span className="text-red-600">*</span> Description :
           <br />
           <Editor
@@ -454,7 +472,7 @@ const PostForm = () => {
               relative_urls: true,
             }}
           />
-        </label>
+        </label>*/}
       </div>
       {router.query.name?.[0] == "multiple-city-ads" ? (
         ""
